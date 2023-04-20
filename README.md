@@ -67,7 +67,7 @@
         <li>Um navegador Web</li>
     </ul>
 
-#Para rodar o projeto localmente 
+# Para rodar o projeto localmente 
 <p>Clone o servidor com o seguinte comando: git clone https://github.com/JoseMatheus29/Orbis.git<p/>
     
 <li>Backend:</li>
@@ -78,8 +78,8 @@
     </ul>
  <li>Frontend:</li>
     <ul>
-    <li>Execute no seu terminal a seguinte linha: npm start</li>
-    <li>Abra em seu navegador o endereço  localhost:3000</li>
+        <li>Execute no seu terminal a seguinte linha: npm start</li>
+        <li>Abra em seu navegador o endereço  localhost:3000</li>
     </ul>
 
 
