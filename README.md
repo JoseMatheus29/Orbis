@@ -4,7 +4,7 @@
     <a href="#Sobre">Sobre</a>
     <a href="#Equipe">Equipe</a>
     <a href="#Tecnologias">Tecnologias</a>
-    <a href="Rodar-Projeto">Para rodar o Projeto</a>
+    <a href="Para rodar o projeto localmente">Para rodar o Projeto</a>
 </p>
 
 # Sobre
