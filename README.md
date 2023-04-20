@@ -4,7 +4,7 @@
     <a href="#Sobre">Sobre</a>
     <a href="#Equipe">Equipe</a>
     <a href="#Tecnologias">Tecnologias</a>
-    
+    <a href="Rodar-Projeto">Para rodar o Projeto</a>
 </p>
 
 # Sobre
@@ -49,16 +49,15 @@
     <ul>
     <li>Para o Backend:</li>
       <ul>
-        <li>Php em sua <a href="https://www.php.net/downloads.php">versão mais recente</a></li>
-        <li>Xamp em sua<a href="https://www.apachefriends.org/pt_br/index.html">versão mais recente</a></li>
-        <li>MySql em sua<a href="https://www.mysql.com/downloads/">versão mais recente</a></li>
+        <li><a href="https://www.php.net/downloads.php">PHPe</a></li>
+        <li><a href="https://www.apachefriends.org/pt_br/index.html">Xamp</a></li>
+        <li><a href="https://www.mysql.com/downloads/">Mysql</a></li>
       </ul>
      <li>Para o Frontend:</li>
         <ul>
-          <li>React</a></li>
-          <li>HTML</li>
-          <li>CSSS</li>
-          <li>JavaScript</li>
+            <li><a href="https://react.dev/">React</a></li>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">HTML5</a></li>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">CSS3</a></li>
         </ul>
         <li>Uma IDE para executar o projeto</li>
             <ul>
@@ -68,8 +67,20 @@
         <li>Um navegador Web</li>
     </ul>
 
-
-
+#Para rodar o projeto localmente 
+<p>Clone o servidor com o seguinte comando: git clone https://github.com/JoseMatheus29/Orbis.git<p/>
+    
+<li>Backend:</li>
+    <ul>
+        <li>Salvar os arquivos no caminho xampp/htdocs/Orbes</li>
+        <li>Ativar no xamp o servidor Apache e o banco de dados Mysql</li>
+        <li>Abrir em seu navegador o endereço localhost/Orbis/index.php</li>
+    </ul>
+ <li>Frontend:</li>
+    <ul>
+    <li>Execute no seu terminal a seguinte linha: npm start</li>
+    <li>Abra em seu navegador o endereço  localhost:3000</li>
+    </ul>
 
 
 
