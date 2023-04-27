@@ -1,0 +1,111 @@
+{
+    "stages": [
+        {
+            "id": 1,
+            "name": "Analisar", 
+            "description": "Reúne ferramentas para identificar necessidades e desejos do usuário, além do entendimento do desafio e do contexto."
+        },
+        {
+            "id": 2,
+            "name": "Projetar", 
+            "description": "Engloba ferramentas para projetar e refinar soluções úteis, com base nas perspectivas dos usuários identificadas na etapa de análise."
+        },
+        {
+            "id": 3,
+            "name": "Avaliar", 
+            "description": "Apresenta ferramentas para verificar a adequação da solução ao desafio proposto e as necessidades dos usuários."
+        }
+    ],
+    "tools": [
+        {
+            "id": 1,
+            "name": "Entrevista Contextual",
+            "type": "academia",
+            "stage_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Questionário",
+            "type": "academia",
+            "stage_id": 1
+        },
+        {
+            "id": 3,
+            "name": "Mapa da empatia",
+            "type": "indústria",
+            "stage_id": 1
+        },
+        {
+            "id": 4,
+            "name": "Análise de competidores",
+            "type": "indústria",
+            "stage_id": 1
+        },
+        {
+            "id": 5,
+            "name": "Jornada do usuário",
+            "type": "indústria",
+            "stage_id": 1
+        },
+        {
+            "id": 6,
+            "name": "Proposta de valor",
+            "type": "indústria",
+            "stage_id": 2
+        },
+        {
+            "id": 7,
+            "name": "Mapa de estórias do usuário",
+            "type": "indústria",
+            "stage_id": 2
+        },
+        {
+            "id": 8,
+            "name": "Esboço sequencial",
+            "type": "academia",
+            "stage_id": 2
+        },
+        {
+            "id": 9,
+            "name": "Oficina de cocriação",
+            "type": "indústria",
+            "stage_id": 2
+        },
+        {
+            "id": 10,
+            "name": "Prototipação",
+            "type": "academia",
+            "stage_id": 2
+        },
+        {
+            "id": 11,
+            "name": "Cartão de teste",
+            "type": "indústria",
+            "stage_id": 3
+        },
+        {
+            "id": 12,
+            "name": "Teste de usabilidade",
+            "type": "academia",
+            "stage_id": 3
+        },
+        {
+            "id": 13,
+            "name": "Avaliação Heurística",
+            "type": "academia",
+            "stage_id": 3
+        },
+        {
+            "id": 14,
+            "name": "Questionários validados",
+            "type": "academia",
+            "stage_id": 3
+        },
+        {
+            "id": 15,
+            "name": "Cartão de aprendizados",
+            "type": "academia",
+            "stage_id": 3
+        }
+    ]
+}
