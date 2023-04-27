@@ -48,32 +48,21 @@
 </p>
 
 <h2 id="techs">🚀 Tecnologias</h2>
-<p>Para Rodar o projeto é necessario ter instalado em seu computador:</p>
-    <ul>
-    <li>Para o Backend:</li>
-      <ul>
-        <li><a href="https://www.php.net/downloads.php">PHPe</a></li>
-        <li><a href="https://www.apachefriends.org/pt_br/index.html">Xamp</a></li>
-        <li><a href="https://www.mysql.com/downloads/">Mysql</a></li>
-      </ul>
-     <li>Para o Frontend:</li>
-    
-    - [React] (https://react.dev)
-    
-        <ul>
-            
-            <li><a href="https://react.dev/">React</a></li>
-            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">HTML5</a></li>
-            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">CSS3</a></li>
-        </ul>
-        <li>Uma IDE para executar o projeto</li>
-            <ul>
-                <li><a href="https://code.visualstudio.com/download">VsCode</a></li>
-                <li>Ou qualquer outra </li>
-            </ul>
-        <li>Um navegador Web</li>
-    </ul>
-    
+<p>Tecnologias do Front-end</p>
+
+-  [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+-  [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+-  [Axios](https://axios-http.com/)
+-  [Styled-Compoments](https://styled-components.com/docs)
+-  [React](https://react.dev/)
+-  [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+<p>Tecnologias do Back-end</p>
+
+
+-  [PHP](https://www.php.net/downloads.php)
+-  [MySQL](https://www.mysql.com/downloads/)
+  
  <h2 id="tools">🛠 Tools </h2>
 
 As ferramentas utilizadas para desenvolver o projeto:
