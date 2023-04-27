@@ -66,22 +66,37 @@
             </ul>
         <li>Um navegador Web</li>
     </ul>
-
-# Para rodar o projeto localmente 
-<p>Clone o servidor com o seguinte comando: git clone https://github.com/JoseMatheus29/Orbis.git<p/>
     
-<li>Backend:</li>
-    <ul>
-        <li>Salvar os arquivos no caminho xampp/htdocs/Orbes</li>
-        <li>Ativar no xamp o servidor Apache e o banco de dados Mysql</li>
-        <li>Abrir em seu navegador o endereço localhost/Orbis/index.php</li>
-    </ul>
- <li>Frontend:</li>
-    <ul>
-        <li>Execute no seu terminal a seguinte linha: npm start</li>
-        <li>Abra em seu navegador o endereço  localhost:3000</li>
-    </ul>
+<h2 id="run-project">🖥 Como rodar o projeto </h2>
 
+<p>Clone o repositório com o seguinte comando:</p>
+
+```bash
+# - Clone this repository:
+$ git clone https://github.com/JoseMatheus29/Orbis.git
+```
+### Frontent
+ 
+```bash
+# - Entre nesse diretório:
+$ cd orbis/frontend
+$ code .
+
+# - For install dependencies:
+$ npm install
+# or
+$ yarn
+
+# - Inicializar o aplicação React
+$ npm run dev
+# or
+$ yarn dev
+
+# - Inicializar o server do projeto:
+$ npm run server
+# or
+$ yarn server
+```
 
 
 
