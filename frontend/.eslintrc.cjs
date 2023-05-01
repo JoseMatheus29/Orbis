@@ -3,6 +3,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:@rocketseat/eslint-config/react',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
