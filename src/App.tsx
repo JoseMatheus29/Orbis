@@ -1,31 +1,17 @@
-import { useEffect, useState } from "react";
-import { api } from "./services/api";
-
-interface IStages {
-  id: number;
-  name: string;
-  description: string;
-}
+import RouteElement from "./routes";
+import { GlobalStyle } from "./styles/global";
+//theme
+//import "primereact/resources/themes/lara-light-indigo/theme.css";     
+//core
+//import "primereact/resources/primereact.min.css";                                       
+        
 
 function App() {
-  const [ stages, setStages ] = useState<IStages[]>([]);
-
-  useEffect(() => {
-    let url = '/stages'
-
-    api(url)
-      .then((response) => setStages(response.data))
-  }, [])
-
-  console.log(stages)
 
   return (
     <>
-      <ul>
-          {
-            stages.map((stage) => <li>{stage.name}</li>)
-          }
-      </ul>
+      <GlobalStyle/>
+      <RouteElement/>
     </>
   )
 }
