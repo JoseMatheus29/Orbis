@@ -101,6 +101,3 @@ $ npm run server
 # or
 $ yarn server
 ```
-
-
-
