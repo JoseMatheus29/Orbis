@@ -1,4 +1,5 @@
-import  { BrowserRouter, Routes, Route} from 'react-router-dom'
+// Importação dos componentes da biblioteca React-Router-Dom
+import  { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
 

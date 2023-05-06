@@ -15,6 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
+        font-family: 'Fira Sans', sans-serif;
+        color: #484848;
         box-sizing: border-box;
         padding: 16px;
     }

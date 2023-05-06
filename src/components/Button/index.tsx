@@ -2,9 +2,13 @@ import { ButtonStyle } from "./styles";
 import { IButton } from "./types";
 
 
-const Button = ({ name }: IButton) => {
+const Button = ({ name, onClick }: IButton) => {
     return(
-        <ButtonStyle>{ name }</ButtonStyle>
+        <ButtonStyle 
+            onClick={onClick}
+        >
+            { name }
+        </ButtonStyle>
     )
 }
 
