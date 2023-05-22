@@ -15,14 +15,17 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
+        margin: 0;
+        padding: 0;
         font-family: 'Fira Sans', sans-serif;
         color: #484848;
         box-sizing: border-box;
-        padding: 16px;
     }
 
     * {
         margin: 0;
         padding: 0;
+        text-decoration: none;
+        list-style: none;
     }
 `
