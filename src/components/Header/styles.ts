@@ -6,29 +6,38 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
-    .content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        width: 75%;
-    }
+    margin-bottom: 60px;
+`
 
-    .logo{
-        display: flex;
-        gap: 10px;
-    }
+export const Content = styled.div`
+    width: 75%;
+    margin: 0 auto;
 
-    nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+
+    .logo a{
+        
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: normal;
+            font-size: 2.25rem;
+        }
         display: flex;
-        gap: 30px;
+        gap: 12px;
+        color: #505D68;
     }
-    
-    nav ul li a{
+`
+
+export const List = styled.ul`
+    display: flex;
+    gap: 30px;
+
+
+    li a{
         font-size: 1rem;
         color: #505D68;
     }
-
-    
 
 `

@@ -29,10 +29,4 @@ export const Inicio = styled.div`
     .description{
         font-size: 1rem;
     }
-
-    .img_orbis_home img{
-        width: 709px;
-        height: 135px;
-        max-width: 50%;
-    }
 `

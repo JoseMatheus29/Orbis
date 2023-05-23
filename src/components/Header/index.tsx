@@ -1,26 +1,28 @@
-import { Container } from "./styles"
+import { Container, Content, List } from "./styles"
 import Logo from "../../assets/logo-orbis.svg"
 import { Link } from "react-router-dom";
 
 const Header = () => {
     return(
         <Container>
-            <div className="content">
+            <Content>
                 <div className="logo">
-                    <img src={Logo} alt="" />
-                    <h1>Orbis</h1>
+                    <Link to="/">                      
+                        <img src={Logo} alt="Ícone de uma bussóla" />
+                        <h1>Orbis</h1>
+                    </Link>
                 </div>
                 <nav>
-                    <ul>
+                    <List>
                         <li>
                             <Link to="/">Acessar o Toolkit</Link>
                         </li>
                         <li>
                             <Link to="/">Me ajude a escolher</Link>
                         </li>
-                    </ul>
+                    </List>
                 </nav>
-            </div>
+            </Content>
         </Container>
 
     )
