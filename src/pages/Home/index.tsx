@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import { useStages } from "../../hooks/useTools";
 import { Inicio } from "./styles"
 import Orbis from "../../assets/orbis-home.svg"
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
