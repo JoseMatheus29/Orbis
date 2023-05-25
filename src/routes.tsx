@@ -2,6 +2,8 @@
 import  { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
+import Toolkit from './pages/Toolkit';
+import Form from './pages/Form';
 
 const RouteElement = () => {
 
@@ -9,6 +11,8 @@ const RouteElement = () => {
         <BrowserRouter>
             <Routes>
                 <Route element={ <Home/> } path="/"/>
+                <Route element={ <Toolkit/> } path='/toolkit'/>
+                <Route element={ <Form/> } path='/form'/>
             </Routes>
         </BrowserRouter>
     )

@@ -15,10 +15,10 @@ const Header = () => {
                 <nav>
                     <List>
                         <li>
-                            <Link to="/">Acessar o Toolkit</Link>
+                            <Link to="/toolkit">Acessar o Toolkit</Link>
                         </li>
                         <li>
-                            <Link to="/">Me ajude a escolher</Link>
+                            <Link to="/form">Me ajude a escolher</Link>
                         </li>
                     </List>
                 </nav>

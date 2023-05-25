@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ButtonStyle = styled.button`
     position: relative;
-    background-color: mediumseagreen;
+    background-color: #505D68;
     border-radius: 8px;
     padding: 16px 24px;
     font-size: 1rem;
