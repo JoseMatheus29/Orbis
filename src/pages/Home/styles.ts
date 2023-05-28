@@ -18,7 +18,7 @@ export const Inicio = styled.div`
     }
 
     .titulo_orbis{
-      font-size: 3.2rem;
+      font-size: 2.5rem;
 
     }
 
