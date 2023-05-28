@@ -1,4 +1,4 @@
-import { StagesProvider } from "./hooks/useTools";
+import { StagesProvider } from "./hooks/useStages";
 import RouteElement from "./routes";
 import { GlobalStyle } from "./styles/global";
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
-import { useStages } from "../../hooks/useTools";
+import { useStages } from "../../hooks/useStages";
 import { Inicio } from "./styles"
 import Orbis from "../../assets/orbis-home.svg"
 import { useNavigate } from "react-router-dom";
