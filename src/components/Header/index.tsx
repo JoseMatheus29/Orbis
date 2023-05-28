@@ -1,8 +1,24 @@
 import { Container, Content, List } from "./styles"
 import Logo from "../../assets/logo-orbis.svg"
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
+
 
 const Header = () => {
+
+    const location = useLocation();
+
+    const [ isHome, setIsHome ] = useState(false);
+
+    useEffect(() => {
+        if(location.pathname === '/') {
+            setIsHome(true);
+        } else {
+            console.log('testtee');
+        }
+    }, [ location.pathname ])
+
     return(
         <Container>
             <Content>
@@ -13,6 +29,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <nav>
+                   {isHome ? <input type="text" name="" id="" /> : null}
                     <List>
                         <li>
                             <Link to="/toolkit">Acessar o Toolkit</Link>

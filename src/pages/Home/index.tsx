@@ -37,7 +37,7 @@ const Home = () => {
                     <h2 className="subtitulo">Toolkit de Design Centrado no Usuário </h2>
                     <p className="descricao">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit blanditiis dignissimos nisi velit autem sed, odio corrupti quasi dolorum ipsum placeat aliquid deserunt quas sequi sunt dolorem similique esse ut?</p>
                     <Button name="Me ajude a escolher!" onClick={handleNavigateForm}/>
-                    <Button name="Acessar Toolkit" onClick={handleNavigateToolkit}/>
+                    <Button variant="secondary" name="Acessar Toolkit" onClick={handleNavigateToolkit}/>
                 </div>
                 <div className="img_orbis_home">
                     <img src={Orbis} alt="" />
