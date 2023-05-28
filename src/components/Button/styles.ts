@@ -6,7 +6,7 @@ export const ButtonStyle = styled.button`
     border-radius: 8px;
     padding: 16px 24px;
     font-size: 1rem;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     color: #ffffff;
     cursor: pointer;
     border: none;

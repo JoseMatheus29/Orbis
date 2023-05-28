@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     body{
         margin: 0;
         padding: 0;
-        font-family: 'Fira Sans', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
         color: #484848;
         box-sizing: border-box;
     }

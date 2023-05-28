@@ -1,21 +1,22 @@
 import Card from "../../components/Card";
 import Header from "../../components/Header";
-import { Content } from "./styles";
+import { Content, GridCards } from "./styles";
 
 const Toolkit = () => {
     return ( 
         <>
             <Header/>
             <Content>
-                <h1>Toolkit</h1>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                <GridCards>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </GridCards>
             </Content>
         </>
     )
