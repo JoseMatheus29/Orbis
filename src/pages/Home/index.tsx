@@ -33,6 +33,8 @@ const Home = () => {
                     <p className="descricao">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit blanditiis dignissimos nisi velit autem sed, odio corrupti quasi dolorum ipsum placeat aliquid deserunt quas sequi sunt dolorem similique esse ut?</p>
                     <Button name="Me ajude a escolher!" onClick={handleNavigateForm}/>
                     <Button name="Acessar Toolkit" onClick={handleNavigateToolkit}/>
+                    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique illum excepturi officiis numquam accusamus ullam, quae necessitatibus quaerat nesciunt quo repellendus aliquid temporibus tempore voluptas minus, iusto vero corporis! Debitis?</h1>
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quia, ipsam veniam sint maxime culpa commodi repellat illum corporis doloribus magni illo, ad perspiciatis earum! Quae vitae necessitatibus eveniet expedita?</h1>
                 </div>
                 <div className="img_orbis_home">
                     <img src={Orbis} alt="" />
