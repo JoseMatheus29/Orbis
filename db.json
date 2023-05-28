@@ -19,7 +19,7 @@
     "tools": [
         {
             "id": 1,
-            "name": "Entrevista Contextual",
+            "name": "Entrevista contextual",
             "type": "academia",
             "stage_id": 1
         },
