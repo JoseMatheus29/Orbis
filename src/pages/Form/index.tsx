@@ -2,8 +2,16 @@ import Button from "../../components/Button";
 import Header from "../../components/Header"
 import { Content } from "./style";
 import Orbis_Form from "../../assets/orbis-form.svg"
+import { useNavigate } from "react-router-dom";
+
 
 const Form = () => {
+
+    const navigate = useNavigate ();
+    const handleNavigateFormStage = () => {
+        navigate('/formstage');
+    }
+
     return (
         <>
             <Header/>
@@ -16,7 +24,7 @@ const Form = () => {
                         <h1 className="titulo_orbis">Me ajude a escolher!</h1>
                         <h3 className="subtitulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                         <p className="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula vulputate lorem, in ornare risus finibus et. In sapien sapien, aliquet ac sagittis a, elementum sit amet urna. Mauris quis convallis enim. </p>
-                        <Button name="Iniciar" /> 
+                        <Button name="Iniciar" onClick={handleNavigateFormStage}/> 
                     </div>
                 </div>
             </Content>
