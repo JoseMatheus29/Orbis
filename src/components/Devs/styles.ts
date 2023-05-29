@@ -62,4 +62,15 @@ export const Desenvolvedores = styled.div`
         justify-content: center;
         gap: 50px;
     }
+
+    .perfis div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nome {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1rem;
+    }
 `

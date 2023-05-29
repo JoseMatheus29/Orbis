@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     height: 300px;
+    max-width: 240px;
     padding: 16px;
+    position: relative;
     color: #424B5A;
     background-color: #ECECEC;
     border-radius: 8px;
@@ -21,9 +23,22 @@ export const Container = styled.div`
         font-size: 1.5rem;
         margin-bottom: 8px;
         font-weight: 700;
+        text-align: center;
     }
 
     h3 {
         font-weight: normal;
+        text-align: center;
+    }
+
+    button {
+        position: absolute;
+        padding: 4px 16px;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 500;
+        bottom: 10px;
     }
 `
