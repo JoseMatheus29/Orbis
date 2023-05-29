@@ -83,20 +83,6 @@ Os requisitos funcionais para a aplicação são:
 
 > RF0012:Input de autocomplete - Busca Rápida de Ferramentas. Como usuário, quero poder usar um sistema de busca eficiente para encontrar rapidamente os métodos que procuro. Então, por meio de uma ferramenta de busca, é retornado para mim os métodos que tenho em mente. 
 
-A disposição dos requisitos no projeto é a seguinte:
-
-#### 3.1. RF0001: Acessar página inicial e mostrar informações sobre o site. 
-##### Arquivos relacionados:
-
-#### 3.2. RF0002: Permitir a navegação do conteúdo do site por meio de um menu.
-##### Arquivos relacionados:
-
-#### 3.3. RF0003: Interagir com os botões referentes ao processo de Design Centrado no Usuário.
-##### Arquivos relacionados:
-
-#### 3.4. RF0004: Permitir a aplicação de filtros nos métodos e ferramentas do Toolkit. 
-##### Arquivos relacionados:
-
 <h2 id="techs">🚀 Tecnologias</h2>
 <p>Tecnologias do Front-end</p>
 
