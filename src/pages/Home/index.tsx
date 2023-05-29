@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import Devs from "../../components/Devs";
 import { Footer } from "../../components/Footer";
 import { Etapas } from "../../components/Etapas";
+import DCU from "../../components/O_que_e";
 
 const Home = () => {
 
@@ -48,6 +49,7 @@ const Home = () => {
             
         </Inicio>
         <Content/>
+        <DCU/>
         <Etapas/>
         <Devs/>
         <Footer/>

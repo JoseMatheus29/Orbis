@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
 export const Stages = styled.div`
-
-.meuBotao{
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5%;
+}
+.meuBotaoA, .meuBotaoP, .meuBotaoAV{
     width: 145px;
-  height: 145px;
-  border-radius: 50%;
-  border: none;
-  background-color: #DADADA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #505D68;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  flex-direction: row;
+    height: 145px;
+    border-radius: 50%;
+    border: none;
+    background-color: #DADADA;
+    color: #505D68;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .Projetar{
@@ -24,14 +26,14 @@ export const Stages = styled.div`
 }
   /* Definindo o estilo inicial do quadrado explicativo */
 .quadradoExplicativo {
-  position: absolute;
-  /* top: 0;
-  left: 0;
-  opacity: 0; */
-  transform: translateX(-100%);
-  transition: opacity 0.3s ease-out;
-  background-color: aliceblue;
-  color: #505D68;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease-out;
+    background-color: aliceblue;
+    color: #505D68;
 }
 
 /* Definindo a animação */
@@ -47,17 +49,17 @@ export const Stages = styled.div`
 }
 
 /* Aplicando a animação ao botão */
-.meuBotao {
-  transition: transform 0.3s ease-out;
+.meuBotaoA, .meuBotaoP, .meuBotaoAV{
+    transition: transform 0.3s ease-out;
 }
 
-.meuBotao:hover {
-  transform: translateX(10px); /* Ajuste a quantidade de deslocamento horizontal aqui */
+.meuBotaoA:hover, .meuBotaoP:hover, .meuBotaoAV:hover {
+    transform: translateX(10px); 
 }
 
-.meuBotao:focus + .quadradoExplicativo {
-  animation: slideIn 0.3s ease-out;
-  opacity: 1;
+.meuBotaoA:focus, .meuBotaoP:focus, .meuBotaoAV:focus + .quadradoExplicativo {
+    animation: slideIn 0.3s ease-out;
+    opacity: 1;
 }
 
 `;
