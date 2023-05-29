@@ -1,5 +1,5 @@
-import styled from "styled-components";
 
+import styled from "styled-components";
 export const Rodape = styled.div`
     .rodape{
         background-color: #505D68;

@@ -5,7 +5,7 @@ import Mariana from "../../assets/foto_mariana.svg"
 import Jamyle from "../../assets/foto_jamyle.svg"
 import Isabelle from "../../assets/foto_isabelle.svg"
 import Matheus from "../../assets/foto_matheus.svg"
-import O_que from "../../assets/o_que.svg"
+
 import Tici_val from "../../assets/tici_val.svg"
 // import Seta_b from "../../assets/seta_b_tici_val.svg"
 // import Seta_c from "../../assets/seta_c_tici_val.svg"
@@ -13,20 +13,6 @@ import Tici_val from "../../assets/tici_val.svg"
  const Devs = () => {
     return(
         <Desenvolvedores>
-        <section className="o_que">
-                <div className="o_que_titulo"><h2>O que é Design Centrado no Usuário?</h2></div>
-                <div className="container_o_que">
-                    <div className="o_que_img"> <img src={O_que} alt="" /> </div>
-                    <div className="o_que_titulo1"><p>Donald Norman, pesquisador de ciência cognitiva e um dos maiores influenciadores sobre design, defende que um bom design requer uma comunicação clara entre pessoas e as máquinas e sistemas que elas precisam utilizar no cotidiano.</p></div>
-                    <div className="o_que_titulo2"><p>Com base nessa ideia, ele criou o termo Design Centrado no Usuário (DCU), uma abordagem de design em que a construção de soluções de design vão de encontro às necessidades dos usuários.</p></div>
-                </div>
-            </section>
-            <section className="animacao">
-                <div className="Analise"><h1>Análise</h1></div>
-                <div className="Sintese"><h1>Síntese</h1></div>
-                <div className="Avaliacao"><h1>Avaliação</h1></div>
-            </section>
-            
             <section className="sobre">
 
                 <div className="sobre_titulo"><h2>Sobre o Orbis</h2></div>
@@ -92,7 +78,7 @@ import Tici_val from "../../assets/tici_val.svg"
             </div>
         </section>
         </Desenvolvedores>
-        
+
     )
 }
 

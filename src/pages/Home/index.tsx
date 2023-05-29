@@ -8,6 +8,7 @@ import Seta from "../../assets/seta-home.svg"
 import { useNavigate } from "react-router-dom";
 import Devs from "../../components/Devs";
 import { Footer } from "../../components/Footer";
+import { Etapas } from "../../components/Etapas";
 
 const Home = () => {
 
@@ -47,6 +48,7 @@ const Home = () => {
             
         </Inicio>
         <Content/>
+        <Etapas/>
         <Devs/>
         <Footer/>
         
