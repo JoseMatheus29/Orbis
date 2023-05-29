@@ -55,10 +55,9 @@ import Tici_val from "../../assets/tici_val.svg"
                     <img className="seta1" src={Seta_b} alt="" />
                     <img className="seta2" src={Seta_c} alt="" />
                 </div> */}
-            </section>
-        <section>
-            <h3 className="titulo">Desenvolvedores</h3>
-            <p className="aragrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius recusandae eos neque saepe doloremque repellat fugit? Quis, nisi veniam odio magnam a itaque autem porro ratione repudiandae praesentium dolore maxime. </p>
+
+            <h3 className="sobre_titulo">Desenvolvedores</h3>
+            <p className="sobre_paragrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius recusandae eos neque saepe doloremque repellat fugit? Quis, nisi veniam odio magnam a itaque autem porro ratione repudiandae praesentium dolore maxime. </p>
             <div className="perfis">
                 <div className="alairton">
                     <img src={Alairton} alt="" />
@@ -92,7 +91,8 @@ import Tici_val from "../../assets/tici_val.svg"
                 </div>
             </div>
         </section>
-        <Desenvolvedores/>
+        </Desenvolvedores>
+        
     )
 }
 

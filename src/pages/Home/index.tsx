@@ -7,6 +7,7 @@ import Orbis from "../../assets/orbis-home.svg"
 import Seta from "../../assets/seta-home.svg"
 import { useNavigate } from "react-router-dom";
 import Devs from "../../components/Devs";
+import { Footer } from "../../components/Footer";
 
 const Home = () => {
 
@@ -47,6 +48,7 @@ const Home = () => {
         </Inicio>
         <Content/>
         <Devs/>
+        <Footer/>
         
          {stages.map( (stage) => <Button name={ stage.name } key={stage.id} onClick={() => handleButton(stage.description) } /> ) }
          <p>{description}</p>

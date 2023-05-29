@@ -75,4 +75,11 @@ export const Desenvolvedores = styled.div`
         width: 50%;
     }
 
+    .perfis{
+        margin: 86px 148px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
 `
