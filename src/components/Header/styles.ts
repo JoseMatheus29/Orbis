@@ -31,6 +31,7 @@ export const Content = styled.div`
 
 export const List = styled.ul`
     display: flex;
+    align-items: center;
     gap: 30px;
 
 
@@ -39,4 +40,14 @@ export const List = styled.ul`
         color: #505D68;
     }
 
+    input {
+        padding: 8px 12px;
+        width: 240px;
+        border-radius: 4px;
+        outline: none;
+        border: 2px solid #C2D1D9;
+        color: #C2D1D9;
+        font-family: 'Ubuntu', sans-serif;
+
+    }
 `

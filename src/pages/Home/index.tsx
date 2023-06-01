@@ -6,10 +6,10 @@ import { Inicio, Content } from "./styles"
 import Orbis from "../../assets/orbis-home.svg"
 import Seta from "../../assets/seta-home.svg"
 import { useNavigate } from "react-router-dom";
-import Devs from "../../components/Devs";
 import { Footer } from "../../components/Footer";
-import { Etapas } from "../../components/Etapas";
-import DCU from "../../components/O_que_e";
+import AboutDevs from "./about";
+import DCU, { Etapas } from "./dcu";
+
 
 const Home = () => {
 
@@ -51,11 +51,12 @@ const Home = () => {
         <Content/>
         <DCU/>
         <Etapas/>
-        <Devs/>
+        <AboutDevs/>
         <Footer/>
-        
-         {stages.map( (stage) => <Button name={ stage.name } key={stage.id} onClick={() => handleButton(stage.description) } /> ) }
+
+        {stages.map( (stage) => <Button name={ stage.name } key={stage.id} onClick={() => handleButton(stage.description) } /> ) }
          <p>{description}</p>
+
         </>
     )
 }

@@ -1,15 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    height: 300px;
-    max-width: 240px;
+    min-height: 330px;
+    max-width: 260px;
     padding: 16px;
     position: relative;
     color: #424B5A;
     background-color: #ECECEC;
     border-radius: 8px;
     border-bottom: 10px solid #424B5A;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
