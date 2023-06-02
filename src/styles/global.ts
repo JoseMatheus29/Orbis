@@ -14,11 +14,11 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
     }
 
-    body{
+    body, h1, h2, h3, p{
         margin: 0;
         padding: 0;
         font-family: 'Ubuntu', sans-serif;
-        color: #484848;
+        color: #505D68;
         box-sizing: border-box;
     }
 

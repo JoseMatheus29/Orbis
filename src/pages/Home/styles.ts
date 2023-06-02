@@ -1,48 +1,42 @@
 import styled from 'styled-components';
 
-export const Inicio = styled.div`
-    .main_home{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .section_home{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 50%;
-        margin: 100px;
-    }
+export const Section = styled.section`  
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    color: #505D68;
 
-    .titulo_orbis{
-      font-size: 2.5rem;
-
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 8px;
     }
-
-    .subtitulo{
-        font-size: 2rem;
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin-bottom: 16px;
     }
-
-    .description{
+    p {
         font-size: 1rem;
+        line-height: 160%;
+        margin-bottom: 16px;
     }
 
-    .img_orbis_home{
-        margin: 50px;
+    button + button {
+        margin-left: 20px;
     }
 
-    .seta_home{
-        display: flex;
-        justify-content: center;
-        margin: 50px;
+    img {
+        width: 50%;
     }
-
-    
-
-    
-
 `
 export const Content = styled.div`
     width: 75%;
     margin: 0 auto;
+`
+export const Arrow = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 `
