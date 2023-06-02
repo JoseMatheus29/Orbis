@@ -4,10 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button";
 import Header from "../../components/Header";
-import Devs from "../../components/Devs";
 import { Footer } from "../../components/Footer";
-import { Etapas } from "../../components/Etapas";
-import DCU from "../../components/O_que_e";
+
 
 import { Section , Content, Arrow } from "./styles"
 
@@ -62,10 +60,6 @@ const Home = () => {
         </Arrow>
         </Content>
             
-       
-        <DCU/>
-        <Etapas/>
-        <Devs/>
         <Footer/>
         
          {stages.map( (stage) => <Button name={ stage.name } key={stage.id} onClick={() => handleButton(stage.description) } /> ) }

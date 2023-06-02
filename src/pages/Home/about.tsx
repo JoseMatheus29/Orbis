@@ -1,4 +1,3 @@
-import { Desenvolvedores, About } from "./styles"
 import Alairton from "../../assets/foto_alairton.svg"
 import Beatriz from "../../assets/foto_beatriz.svg"
 import Mariana from "../../assets/foto_mariana.svg"
@@ -9,13 +8,12 @@ import Tici_val from "../../assets/tici_val.svg"
 
 const AboutDevs = () => {
     return(
-        <Desenvolvedores>
-            <About>
+<>
                 <section className="sobre">
                     <div className="sobre_titulo"><h2>Sobre o Orbis</h2></div>
                     <div className="sobre_paragrafo"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis neque sed quaerat sit praesentium similique? Maxime quidem dolorem illum iusto excepturi quasi iure corporis, optio, quos consequuntur voluptatum alias debitis!</p></div>
                 </section>  
-            </About>
+
                     <section className="container_idealizadoras">
                         <div className="container_titulo"><h3>Idealizadoras</h3></div>
                         <div className="sobre_paragrafo"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis neque sed quaerat sit praesentium similique? Maxime quidem dolorem illum iusto excepturi quasi iure corporis, optio, quos consequuntur voluptatum alias debitis!</p></div>
@@ -72,7 +70,7 @@ const AboutDevs = () => {
                     </div>
                 </div>
                 </section>
-        </Desenvolvedores>  
+                </>
     )
 }
 
