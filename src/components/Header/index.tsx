@@ -14,8 +14,6 @@ const Header = () => {
     useEffect(() => {
         if(location.pathname === '/') {
             setIsHome(true);
-        } else {
-            console.log('testtee');
         }
     }, [ location.pathname ])
 
@@ -29,8 +27,9 @@ const Header = () => {
                     </Link>
                 </div>
                 <nav>
-                   {isHome ? <input type="text" name="" id="" /> : null}
+                  
                     <List>
+                        {isHome ? <input type="text" placeholder="Já possui um método em mente?" /> : null}
                         <li>
                             <Link to="/toolkit">Acessar o Toolkit</Link>
                         </li>

@@ -7,6 +7,6 @@ export const Content = styled.div`
 
 export const GridCards = styled.div`
     display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns:  auto auto auto auto;
     gap: 30px;
 `

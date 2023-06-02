@@ -1,5 +1,5 @@
 import O_que from "../../assets/o_que.svg"
-import { OqueEdcu } from "./styles"
+import { OqueEdcu, Stages } from "./styles"
 
 const DCU = () => {
     return(
@@ -16,5 +16,21 @@ const DCU = () => {
     )
         
 }
-
 export default DCU
+
+export const Etapas = () => {
+    return (
+      <Stages>
+      <div className="botao">
+          <div className="triangularBottom1">
+            <button className="meuBotaoA ">Analisar</button>
+          </div>
+          <div className="triangularBottom2">
+          <button className="meuBotaoP ">Projetar</button>
+          <button className="meuBotaoAV ">Avaliar</button>
+          </div>
+          <div className="quadradoExplicativo">Texto explicativo</div>
+      </div>
+      </Stages>
+    );
+  }
