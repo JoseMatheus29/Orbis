@@ -2,7 +2,7 @@ import O_que from "../../assets/o_que.svg"
 
 const DCU = () => {
     return(
- <>
+      <>
             <section className="o_que">
                 <div className="o_que_titulo"><h2>O que é Design Centrado no Usuário?</h2></div>
                 <div className="container_o_que">
