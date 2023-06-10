@@ -7,10 +7,10 @@ import Header from "../../components/Header";
 import { Footer } from "../../components/Footer";
 
 
-import { Content, Arrow, Row, Column, Main } from "./styles"
+import { Content, Arrow, Row, Column, Main } from "./styles";
 
-import Orbis from "../../assets/orbis-home.svg"
-import Seta from "../../assets/seta-home.svg"
+import Orbis from "../../assets/orbis-home.svg";
+import Seta from "../../assets/seta-home.svg";
 
 import DCU from "./dcu";
 

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
+    padding-top: 100px;
 `
 
 export const GridCards = styled.div`
     display: grid;
     grid-template-columns:  auto auto auto auto;
-    gap: 30px;
+    gap: 24px;
 `
