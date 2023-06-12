@@ -3,6 +3,6 @@ export interface ITool {
     name_pt: string;
     name_en: string;
     type: string;
-    effort: string;
+    effort: string | number;
     Stage_idStage: string;
 }

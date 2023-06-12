@@ -26,19 +26,23 @@ const Toolkit = () => {
 
     const filteredTools = allTools.filter((tool) => {
 
-      if (stage && stage == '0' && tool.Stage_idStage !== stage) {
+      // Filtra por método
+      if (stage && stage !== tool.Stage_idStage) {
         return false;
       }
-      if (effort && tool.effort != effort) {
+    
+      // Filtra por nível de esforço
+      if (effort && effort !== parseFloat(tool.effort) ) {
         return false;
       }
+
       return true;
     });
 
     setResult(filteredTools);
   };
   
-  console.log(result);
+  console.log(effort);
 
   
   return (
@@ -47,8 +51,11 @@ const Toolkit = () => {
 
       <Content>
         <Button name="ANALISAR" onClick={() => setStage('3')}/>
+        <Button name="PROJETAR" onClick={() => setStage('4')}/>
+        <Button name="AVALIAR" onClick={() => setStage('5')}/>
 
         <label htmlFor="effort">Esforço</label>
+
         <input
           type="range"
           value={effort}
