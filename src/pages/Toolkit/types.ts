@@ -1,6 +1,8 @@
 export interface ITool {
     id: number;
-    name: string;
+    name_pt: string;
+    name_en: string;
     type: string;
-    stage_id: number;
+    effort: string;
+    Stage_idStage: string;
 }

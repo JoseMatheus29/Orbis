@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useStages } from "../../hooks/useStages";
+//import { useStages } from "../../hooks/useStages";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button";
@@ -17,7 +17,7 @@ import DCU from "./dcu";
 const Home = () => {
 
     // Pegando as etapas do DCU na API
-    const { stages } = useStages();
+   // const { stages } = useStages();
     const [description, setDecription] = useState('');
    
 

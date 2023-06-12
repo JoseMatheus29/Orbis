@@ -13,6 +13,12 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 3px solid #505D68;
+    transition: .2s;
+    
+    &:hover {
+        box-shadow: 3px 3px 0px #505D68;
+    }
 
     img {
         margin-bottom: 24px;
@@ -33,11 +39,11 @@ export const Container = styled.div`
     button {
         position: absolute;
         padding: 4px 16px;
-        border-radius: 4px;
+        border-radius: 0 0 8px 8px;
         font-size: 1rem;
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 500;
-        bottom: 10px;
+        top: 0px;
     }
 `

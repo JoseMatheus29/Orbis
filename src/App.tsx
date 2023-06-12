@@ -9,10 +9,9 @@ function App() {
 
   return (
     <>
-      <StagesProvider>
+      
       <GlobalStyle/>
       <RouteElement/>
-      </StagesProvider>
     </>
   )
 }

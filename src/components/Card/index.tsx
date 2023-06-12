@@ -6,7 +6,7 @@ import { stageName } from "./utils";
 interface ICard {
     name_pt: string;
     name_en: string;
-    stage_id: number;
+    stage_id: string;
 }
 
 const Card = ({ name_pt, name_en, stage_id }: ICard) => {
