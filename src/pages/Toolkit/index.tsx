@@ -8,51 +8,74 @@ import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 
 const Toolkit = () => {
+  const filters = ["ANALISAR", "PROJETAR", "AVALIAR"]
+
   const [allTools, setAllTools] = useState<ITool[]>([]);
   const [result, setResult] = useState<ITool[]>([]);
 
   const [stage, setStage] = useState('');
   const [effort, setEffort] = useState("0");
+  const [time, setTime] = useState("0");
+
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   useEffect(() => {
     api.get("/Tools/list").then((response) => {setAllTools(response.data); setResult(response.data)});
   }, []);
 
   useEffect(() => {
-    applyFilters();
-  }, [stage, effort]);
+    let qs = allTools
 
-  const applyFilters = () => {
+    if (stage) {
+      qs = filter(qs, "Stage_idStage", stage)
+    }
 
-    const filteredTools = allTools.filter((tool) => {
+    if (effort && parseInt(effort) != 0) {
+      qs = filter(qs, "effort", effort)
+    }
 
-      // Filtra por método
-      if (stage && stage !== tool.Stage_idStage) {
-        return false;
-      }
-    
-      // Filtra por nível de esforço
-      if (effort && effort !== parseFloat(tool.effort) ) {
-        return false;
-      }
+    if (time && parseInt(time) != 0) {
+      qs = filter(qs, "time", time)
+    }
 
-      return true;
+    setResult(qs)
+  }, [stage, effort, time]);
+
+  const resetFilters = () => {
+    setEffort("0")
+    setStage("")
+    setTime("0")
+  }
+
+  const filter = (queryset: ITool[], key: string, value: string) => {
+    const filteredTools = queryset.filter((tool) => {
+      // @ts-ignore
+      return tool[key] === value;
     });
 
-    setResult(filteredTools);
-  };
-  
-  console.log(effort);
-
+    return filteredTools
+  }
   
   return (
     <>
       <Header />
 
       <Content>
-        <Button name="ANALISAR" onClick={() => setStage('3')}/>
-        <Button name="PROJETAR" onClick={() => setStage('4')}/>
-        <Button name="AVALIAR" onClick={() => setStage('5')}/>
+        <Button 
+          name="ANALISAR" 
+          onClick={() => setStage('3')}
+          variant="secondary"
+        />
+        <Button 
+          name="PROJETAR" 
+          onClick={() => setStage('4')}
+          variant="secondary"
+        />
+        <Button 
+          name="AVALIAR" 
+          onClick={() => setStage('5')}
+          variant="secondary"
+        />
 
         <label htmlFor="effort">Esforço</label>
 
@@ -64,6 +87,18 @@ const Toolkit = () => {
           min={0}
           max={3}
         />
+
+        <label htmlFor="time">Time</label>
+
+        <input
+          type="range"
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+          name="time"
+          min={0}
+          max={3}
+        />
+        <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
 {/* 
         {isFilter ? (
           <span
@@ -83,9 +118,13 @@ const Toolkit = () => {
                 name_en={tool.name_en}
               />
               esforço: {tool.effort}
+              tempo: {tool.time}
             </Link>
           ))}
         </GridCards>
+        {
+          result.length ? null : "Nao possui ferramentas"
+        }
       </Content>
     </>
   );

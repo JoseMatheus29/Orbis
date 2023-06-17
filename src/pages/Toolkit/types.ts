@@ -5,4 +5,5 @@ export interface ITool {
     type: string;
     effort: string | number;
     Stage_idStage: string;
+    time: string | number;
 }
