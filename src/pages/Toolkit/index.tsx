@@ -1,80 +1,107 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { api } from "../../services/api";
+
+import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
+
 import { Content, GridCards } from "./styles";
-import { api } from "../../services/api";
 import { ITool } from "./types";
-import Button from "../../components/Button";
-import { Link } from "react-router-dom";
 
 const Toolkit = () => {
-  const filters = ["ANALISAR", "PROJETAR", "AVALIAR"]
-
+  // Estado que recebe todos os métodos disponíveis no toolkit por meio de uma requisição get
   const [allTools, setAllTools] = useState<ITool[]>([]);
+  // Estado que rendezira os métodos na tela, ele pode sofrer alterações por meio dos filtros 
   const [result, setResult] = useState<ITool[]>([]);
 
-  const [stage, setStage] = useState('');
-  const [effort, setEffort] = useState("0");
-  const [time, setTime] = useState("0");
+  // Estados dos filtros, que podem ser alterados por meio dos inputs/buttons de filtros
+  const [effort, setEffort] = useState("0"); // Iniciar do 0
+  const [time, setTime] = useState("0"); // Inicia do 0
+  const [selectedStages, setSelectedStages] = useState<string[]>([]); // Inicia com todos selecionados
 
-  const [selectedFilters, setSelectedFilters] = useState([]);
+  // Estado do tipo boleano que verifica se foi aplicado algum filtro no toolkit
+  const [isFilter, setIsFilter] = useState(false);
+
+  const handleButtonFilterStage = (stage: string) => {
+    // Verifica se a etapa clicada está selecionada ou não
+    if(selectedStages.includes(stage)) { // Se estiver, irá remover do array
+      let stages = selectedStages.filter((filter) => filter !== stage);
+      setSelectedStages(stages);
+    } else { // Se não estiver, irá incluir no array
+      setSelectedStages([...selectedStages, stage])
+    }
+  }
 
   useEffect(() => {
     api.get("/Tools/list").then((response) => {setAllTools(response.data); setResult(response.data)});
   }, []);
 
-  useEffect(() => {
-    let qs = allTools
-
-    if (stage) {
-      qs = filter(qs, "Stage_idStage", stage)
-    }
-
-    if (effort && parseInt(effort) != 0) {
-      qs = filter(qs, "effort", effort)
-    }
-
-    if (time && parseInt(time) != 0) {
-      qs = filter(qs, "time", time)
-    }
-
-    setResult(qs)
-  }, [stage, effort, time]);
-
-  const resetFilters = () => {
-    setEffort("0")
-    setStage("")
-    setTime("0")
-  }
-
   const filter = (queryset: ITool[], key: string, value: string) => {
     const filteredTools = queryset.filter((tool) => {
       // @ts-ignore
-      return tool[key] === value;
+      return tool[key] == value;
     });
 
-    return filteredTools
+    return filteredTools;
   }
+
+  useEffect(() => {
+    // QuerySet inicia com todos os métodos
+    let qs = allTools
+
+    // Filtrando por etapa
+    if(selectedStages.length !== 0) {
+      let filteredQs: ITool[] = [];
+      // Percorrendo todas as etapas selecionadas
+      for(let i = 0; i <= selectedStages.length - 1; i++) {
+        let qs_temp = filter(qs, "Stage_idStage", selectedStages[i]);
+        filteredQs = filteredQs.concat(qs_temp);
+      }
+      qs = filteredQs;
+    }
+    
+
+    // Filtrando por esforço 
+    if (effort && parseInt(effort) != 0) {
+      qs = filter(qs, "effort", effort);
+    }
+
+    // Filtrando por tempo 
+    if (time && parseInt(time) != 0) {
+      qs = filter(qs, "time", time);
+    }
+    console.log(qs);
+    // Altera o estado result após filtragem
+    setResult(qs)
+  }, [selectedStages, effort, time]);
+
+  const resetFilters = () => {
+    // Função para resetar os filtros para o estado inicial
+    setEffort("0");
+    setSelectedStages([]);
+    setTime("0");
+  }
+
   
   return (
     <>
       <Header />
-
       <Content>
         <Button 
           name="ANALISAR" 
-          onClick={() => setStage('3')}
-          variant="secondary"
+          onClick={() => handleButtonFilterStage('3')}
+          variant={selectedStages.includes('3') ? "" : "secondary"}
         />
         <Button 
           name="PROJETAR" 
-          onClick={() => setStage('4')}
-          variant="secondary"
+          onClick={() => handleButtonFilterStage('4')}
+          variant={selectedStages.includes('4') ? "" : "secondary"}
         />
         <Button 
           name="AVALIAR" 
-          onClick={() => setStage('5')}
-          variant="secondary"
+          onClick={() => handleButtonFilterStage('5')}
+          variant={selectedStages.includes('5') ? "" : "secondary"}
         />
 
         <label htmlFor="effort">Esforço</label>
@@ -99,16 +126,6 @@ const Toolkit = () => {
           max={3}
         />
         <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
-{/* 
-        {isFilter ? (
-          <span
-            onClick={() => {
-              setIsFilter(false);
-            }}
-          >
-            Limpar filtro
-          </span>
-        ) : null} */}
         <GridCards>
           {result.map((tool) => (
             <Link to={`${tool.id}`}>
