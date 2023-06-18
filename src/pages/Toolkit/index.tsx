@@ -21,7 +21,7 @@ const Toolkit = () => {
   const [selectedStages, setSelectedStages] = useState<string[]>([]); // Inicia com todos selecionados
 
   // Estado do tipo boleano que verifica se foi aplicado algum filtro no toolkit
-  const [isFilter, setIsFilter] = useState(false);
+  //const [isFilter, setIsFilter] = useState(false);
 
   const handleButtonFilterStage = (stage: string) => {
     // Verifica se a etapa clicada está selecionada ou não

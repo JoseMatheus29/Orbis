@@ -1,4 +1,4 @@
-import { StagesProvider } from "./hooks/useStages";
+import { ToolsProvider } from "./hooks/useTools";
 import RouteElement from "./routes";
 import { GlobalStyle } from "./styles/global";
 
@@ -9,9 +9,10 @@ function App() {
 
   return (
     <>
-      
-      <GlobalStyle/>
-      <RouteElement/>
+      <ToolsProvider>
+        <GlobalStyle/>
+        <RouteElement/>
+      </ToolsProvider>
     </>
   )
 }
