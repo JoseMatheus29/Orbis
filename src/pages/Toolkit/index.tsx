@@ -7,7 +7,7 @@ import Card from "../../components/Card";
 import Header from "../../components/Header";
 import Slider from '@mui/material/Slider';
 
-import { Content, GridCards } from "./styles";
+import { Content, Filters, GridCards } from "./styles";
 import { ITool } from "./types";
 
 const Toolkit = () => {
@@ -89,6 +89,7 @@ const Toolkit = () => {
     <>
       <Header />
       <Content>
+        <h4>Etapas</h4>
         <Button 
           name="ANALISAR" 
           onClick={() => handleButtonFilterStage('3')}
@@ -104,19 +105,10 @@ const Toolkit = () => {
           onClick={() => handleButtonFilterStage('5')}
           variant={selectedStages.includes('5') ? "" : "secondary"}
         />
+        <Filters>
         <label htmlFor="effort">Esforço</label>
 
-        <input
-          type="range"
-          value={effort}
-          onChange={(e) => setEffort(e.target.value)}
-          name="effort"
-          min={0}
-          max={3}
-        />
-        <label htmlFor="time">Time</label>
-
-        {/* <Slider
+        <Slider
           aria-label="Esforço"
           defaultValue={3}
           valueLabelDisplay="auto"
@@ -124,16 +116,41 @@ const Toolkit = () => {
           marks
           min={0}
           max={3}
-        /> */}
+          style={{width: "150px"}}
+        />
 
-        <input
+        {/* <input
+          type="range"
+          value={effort}
+          onChange={(e) => setEffort(e.target.value)}
+          name="effort"
+          min={0}
+          max={3}
+        /> */}
+        </Filters>
+        <Filters>
+        <label htmlFor="time">Tempo</label>
+
+        <Slider
+          aria-label="Esforço"
+          defaultValue={3}
+          valueLabelDisplay="auto"
+          step={1}
+          marks
+          min={0}
+          max={3}
+          style={{width: "150px"}}
+        />
+
+        {/* <input
           type="range"
           value={time}
           onChange={(e) => setTime(e.target.value)}
           name="time"
           min={0}
           max={3}
-        />
+        /> */}
+        </Filters>
 
         <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
         <GridCards>
