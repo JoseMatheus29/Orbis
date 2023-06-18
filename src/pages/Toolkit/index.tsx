@@ -33,6 +33,7 @@ const Toolkit = () => {
     }
   }
 
+
   useEffect(() => {
     api.get("/Tools/list").then((response) => {setAllTools(response.data); setResult(response.data)});
   }, []);
@@ -71,7 +72,6 @@ const Toolkit = () => {
     if (time && parseInt(time) != 0) {
       qs = filter(qs, "time", time);
     }
-    console.log(qs);
     // Altera o estado result após filtragem
     setResult(qs)
   }, [selectedStages, effort, time]);
