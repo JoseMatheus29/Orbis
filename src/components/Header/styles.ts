@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #F2F5F7;
+    background-color: var(--red-300);
     height: 75px;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ export const Content = styled.div`
         }
         display: flex;
         gap: 12px;
-        color: #505D68;
+        color: var(--white);
     }
 `
 
@@ -39,7 +39,7 @@ export const List = styled.ul`
 
     li a{
         font-size: 1rem;
-        color: #505D68;
+        color: var(--white);
     }
 
     input {
