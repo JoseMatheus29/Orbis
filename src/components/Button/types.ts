@@ -1,6 +1,6 @@
 export interface IButton {
     name: string | undefined;
-    onClick?: () => void;
+    onClick?: any | undefined;
     variant?: string
 }
 

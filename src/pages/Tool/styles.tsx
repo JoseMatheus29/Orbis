@@ -6,8 +6,10 @@ export const Content = styled.div`
     padding-top: 100px;
 `
 
-export const GridCards = styled.div`
-    display: grid;
-    grid-template-columns:  auto auto auto auto;
-    gap: 24px;
+export const Steps = styled.div`
+    margin-top: 16px;
+
+    h2 {
+        margin: 10px 0;
+    }
 `

@@ -2,17 +2,20 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     min-height: 330px;
-    max-width: 260px;
+    width: 260px;
     padding: 16px;
     position: relative;
     color: #424B5A;
-    background-color: #ECECEC;
-    border-radius: 8px;
-    border-bottom: 10px solid #424B5A;
+    background-color: #DCD6F0;
+    border-radius: 20px;
+    border-bottom: 10px solid #725AC1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 3px solid #725AC1;
+    transition: .2s;
+    box-shadow: 3px 3px 0px #725AC1;
 
     img {
         margin-bottom: 24px;
@@ -33,11 +36,12 @@ export const Container = styled.div`
     button {
         position: absolute;
         padding: 4px 16px;
-        border-radius: 4px;
+        border-radius: 0 0 8px 8px;
         font-size: 1rem;
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 500;
-        bottom: 10px;
+        background: #725AC1;
+        top: 0px;
     }
 `
