@@ -134,8 +134,6 @@ const Toolkit = () => {
                 stage_id={tool.Stage_idStage}
                 name_en={tool.name_en}
               />
-              esforço: {tool.effort}
-              tempo: {tool.time}
             </Link>
           ))}
         </GridCards>

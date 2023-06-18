@@ -6,19 +6,16 @@ export const Container = styled.div`
     padding: 16px;
     position: relative;
     color: #424B5A;
-    background-color: #ECECEC;
-    border-radius: 8px;
-    border-bottom: 10px solid #424B5A;
+    background-color: #DCD6F0;
+    border-radius: 20px;
+    border-bottom: 10px solid #725AC1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 3px solid #505D68;
+    border: 3px solid #725AC1;
     transition: .2s;
-    
-    &:hover {
-        box-shadow: 3px 3px 0px #505D68;
-    }
+    box-shadow: 3px 3px 0px #725AC1;
 
     img {
         margin-bottom: 24px;
@@ -44,6 +41,7 @@ export const Container = styled.div`
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 500;
+        background: #725AC1;
         top: 0px;
     }
 `
