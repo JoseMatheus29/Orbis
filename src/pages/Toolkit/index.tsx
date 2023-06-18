@@ -6,7 +6,7 @@ import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 
-import { Content, GridCards } from "./styles";
+import { Content, GridCards, Slider } from "./styles";
 import { ITool } from "./types";
 
 const Toolkit = () => {
@@ -103,7 +103,18 @@ const Toolkit = () => {
           onClick={() => handleButtonFilterStage('5')}
           variant={selectedStages.includes('5') ? "" : "secondary"}
         />
+        <Button 
+          name="AVALIAR" 
+          onClick={() => handleButtonFilterStage('5')}
+          variant={selectedStages.includes('5') ? "" : "primary"}
+        />
+        <Button 
+          name="AVALIAR" 
+          onClick={() => handleButtonFilterStage('5')}
+          variant={selectedStages.includes('5') ? "" : "terciary"}
+        />
 
+      <Slider>
         <label htmlFor="effort">Esforço</label>
 
         <input
@@ -125,6 +136,8 @@ const Toolkit = () => {
           min={0}
           max={3}
         />
+        </Slider>
+
         <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
         <GridCards>
           {result.map((tool) => (
