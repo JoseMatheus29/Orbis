@@ -3,6 +3,7 @@ import Logo from "../../assets/logo-orbis.svg"
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
+import InputTools from "../InputTools";
 
 
 const Header = () => {
@@ -29,7 +30,10 @@ const Header = () => {
                 <nav>
                   
                     <List>
-                        {isHome ? <input type="text" placeholder="Já possui um método em mente?" /> : null}
+                        {isHome ? 
+                            <InputTools/>
+                            :
+                            null}
                         <li>
                             <Link to="/toolkit">Acessar o Toolkit</Link>
                         </li>

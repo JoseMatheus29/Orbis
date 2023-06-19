@@ -21,9 +21,10 @@ export const Content = styled.div`
     .logo a{
         
         h1 {
-            font-family: 'DM Serif Display', serif;
+            font-family: 'Sansita', serif;
             font-weight: normal;
             font-size: 2.25rem;
+            color: var(--white);
         }
         display: flex;
         gap: 12px;
@@ -42,7 +43,7 @@ export const List = styled.ul`
         color: var(--white);
     }
 
-    input {
+    /* input {
         padding: 8px 12px;
         width: 240px;
         border-radius: 4px;
@@ -51,5 +52,5 @@ export const List = styled.ul`
         color: #C2D1D9;
         font-family: 'Ubuntu', sans-serif;
 
-    }
+    } */
 `

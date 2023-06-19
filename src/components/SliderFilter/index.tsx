@@ -17,7 +17,7 @@ const SliderFilter = ({ onChange, value, ariaLabel } : ISliderFilter) => {
           value={parseInt(value)}
           onChange={onChange}
           step={1}
-          size={"medium"}
+          size="small"
           marks
           min={0}
           max={3}

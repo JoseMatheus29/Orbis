@@ -47,7 +47,15 @@ export const GlobalStyle = createGlobalStyle`
         
     }
 
-    .MuiSlider-root {
-        background-color: #272727;
-    } 
+
+   .MuiAutocomplete-inputRoot {
+        height: 40px;
+        background-color: var(--white);
+        width: 240px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid #C2D1D9;
+        color: #C2D1D9;
+        font-family: 'Ubuntu', sans-serif;
+    }
 `
