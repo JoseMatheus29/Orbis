@@ -57,7 +57,6 @@ const Home = () => {
                     />
                 </Row>
             </Column>
-
             <img src={Orbis} alt="Orbis é uma bussóla com bigode e muito simpática" />     
         </Main>
         <Arrow>
