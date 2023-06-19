@@ -46,4 +46,8 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
         
     }
+
+    .MuiSlider-root {
+        background-color: #272727;
+    } 
 `

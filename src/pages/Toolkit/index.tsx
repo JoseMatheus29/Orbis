@@ -9,6 +9,7 @@ import Slider from '@mui/material/Slider';
 
 import { Content, Filters, GridCards } from "./styles";
 import { ITool } from "./types";
+import SliderFilter from "../../components/SliderFilter";
 
 const Toolkit = () => {
   // Estado que recebe todos os métodos disponíveis no toolkit por meio de uma requisição get
@@ -115,36 +116,22 @@ const Toolkit = () => {
         />
         
         <label htmlFor="effort">Esforço</label>
-
-        <Slider
-          aria-label="Esforço"
-          defaultValue={0}
-          valueLabelDisplay="auto"
-          value={parseInt(effort)}
+        <SliderFilter
+          ariaLabel={"Esforço"}
           onChange={handleOnChangeSliderEffort}
-          step={1}
-          size={"medium"}
-          marks
-          min={0}
-          max={3}
-          style={{width: "150px"}}
+          value={effort}
+
         />
+        
 
         <label htmlFor="time">Tempo</label>
 
-        <Slider
-          aria-label="Esforço"
-          defaultValue={3}
-          valueLabelDisplay="auto"
-          step={1}
-          size={"medium"}
-          value={parseInt(time)}
+        <SliderFilter
+          ariaLabel={"Tempo"}
           onChange={handleOnChangeSliderTime}
-          marks
-          min={0}
-          max={3}
-          style={{width: "150px"}}
+          value={time}
         />
+
         </Filters>
 
         <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
