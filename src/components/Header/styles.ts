@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: var(--red-300);
+    background-color: #F46142;
     height: 75px;
     display: flex;
     align-items: center;
@@ -13,10 +13,11 @@ export const Container = styled.div`
 export const Content = styled.div`
     width: 75%;
     margin: 0 auto;
-
+    padding-right: 0.5%;
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    
 
     .logo a{
         
@@ -28,6 +29,11 @@ export const Content = styled.div`
         display: flex;
         gap: 12px;
         color: var(--white);
+        
+    }
+
+    h1{
+        color: white;
     }
 `
 
@@ -51,5 +57,10 @@ export const List = styled.ul`
         color: #C2D1D9;
         font-family: 'Ubuntu', sans-serif;
 
+    }
+
+    li:hover{
+           text-decoration: underline;
+           text-decoration-color: white;
     }
 `

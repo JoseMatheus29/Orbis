@@ -76,4 +76,20 @@ export const Row = styled.div`
 export const Column = styled.div`
     display: flex;
     flex-direction: column;
+
+    h1{
+        color: #F46142;
+        font-family: 'Sansita', sans-serif;
+        text-shadow: 2px 2px 0 #474747;
+    }
+
+    h2{
+        color: #474747;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    p{
+        color: #474747;
+        font-family: 'Raleway', sans-serif;
+    }
 `
