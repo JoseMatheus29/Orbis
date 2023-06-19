@@ -5,7 +5,6 @@ import { api } from "../../services/api";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
-import Slider from '@mui/material/Slider';
 
 import { Content, Filters, GridCards } from "./styles";
 import { ITool } from "./types";
@@ -122,7 +121,7 @@ const Toolkit = () => {
           value={effort}
 
         />
-        
+
 
         <label htmlFor="time">Tempo</label>
 
