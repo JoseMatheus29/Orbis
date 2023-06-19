@@ -6,4 +6,6 @@ export interface ITool {
     effort: string | number;
     Stage_idStage: string;
     time: string | number;
+    templateName: string;
+    icon: string;
 }

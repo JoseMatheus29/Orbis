@@ -26,8 +26,8 @@ export const ButtonStyle = styled.button<IButtonStyle>`
        box-shadow:  5px 5px 0 0 white, 5px 5px 0 2px #424B5A;
 
        &:hover {
-            background-color: #fff;
-            color: #474747;
+            background-color: #424B5A;
+            color: #fff;
        }
 
        &:active{
@@ -46,6 +46,12 @@ export const ButtonStyle = styled.button<IButtonStyle>`
        &:hover {
             background-color: #424B5A;
             color: #fff;
+       }
+
+       &:active{
+        background-color: #F9C0B4;
+        box-shadow: 5px 5px #666;
+        transform: translateY(4px);
        }
     `}
 

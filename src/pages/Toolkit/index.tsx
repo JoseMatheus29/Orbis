@@ -6,8 +6,9 @@ import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 
-import { Content, GridCards, Slider } from "./styles";
+import { Content, Filters, GridCards } from "./styles";
 import { ITool } from "./types";
+import SliderFilter from "../../components/SliderFilter";
 
 const Toolkit = () => {
   // Estado que recebe todos os métodos disponíveis no toolkit por meio de uma requisição get
@@ -16,7 +17,7 @@ const Toolkit = () => {
   const [result, setResult] = useState<ITool[]>([]);
 
   // Estados dos filtros, que podem ser alterados por meio dos inputs/buttons de filtros
-  const [effort, setEffort] = useState("0"); // Iniciar do 0
+  const [effort, setEffort] = useState<string>("0"); // Iniciar do 0
   const [time, setTime] = useState("0"); // Inicia do 0
   const [selectedStages, setSelectedStages] = useState<string[]>([]); // Inicia com todos selecionados
 
@@ -79,8 +80,15 @@ const Toolkit = () => {
   const resetFilters = () => {
     // Função para resetar os filtros para o estado inicial
     setEffort("0");
-    setSelectedStages([]);
     setTime("0");
+    setSelectedStages([]);
+  }
+
+  const handleOnChangeSliderEffort = (event: any) => {
+    setEffort(event.target.value);
+  }
+  const handleOnChangeSliderTime = (event: any) => {
+    setTime(event.target.value);
   }
 
   
@@ -88,6 +96,8 @@ const Toolkit = () => {
     <>
       <Header />
       <Content>
+        <h4>Etapas</h4>
+        <Filters>
         <Button 
           name="ANALISAR" 
           onClick={() => handleButtonFilterStage('3')}
@@ -103,40 +113,25 @@ const Toolkit = () => {
           onClick={() => handleButtonFilterStage('5')}
           variant={selectedStages.includes('5') ? "" : "secondary"}
         />
-        <Button 
-          name="AVALIAR" 
-          onClick={() => handleButtonFilterStage('5')}
-          variant={selectedStages.includes('5') ? "" : "primary"}
-        />
-        <Button 
-          name="AVALIAR" 
-          onClick={() => handleButtonFilterStage('5')}
-          variant={selectedStages.includes('5') ? "" : "terciary"}
-        />
-
-      <Slider>
+        
         <label htmlFor="effort">Esforço</label>
-
-        <input
-          type="range"
+        <SliderFilter
+          ariaLabel={"Esforço"}
+          onChange={handleOnChangeSliderEffort}
           value={effort}
-          onChange={(e) => setEffort(e.target.value)}
-          name="effort"
-          min={0}
-          max={3}
+
         />
 
-        <label htmlFor="time">Time</label>
 
-        <input
-          type="range"
+        <label htmlFor="time">Tempo</label>
+
+        <SliderFilter
+          ariaLabel={"Tempo"}
+          onChange={handleOnChangeSliderTime}
           value={time}
-          onChange={(e) => setTime(e.target.value)}
-          name="time"
-          min={0}
-          max={3}
         />
-        </Slider>
+
+        </Filters>
 
         <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
         <GridCards>
@@ -146,6 +141,8 @@ const Toolkit = () => {
                 name_pt={tool.name_pt}
                 stage_id={tool.Stage_idStage}
                 name_en={tool.name_en}
+                variant={tool.templateName}
+                icon={tool.icon}
               />
             </Link>
           ))}
