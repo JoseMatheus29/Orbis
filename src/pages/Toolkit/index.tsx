@@ -5,6 +5,7 @@ import { api } from "../../services/api";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
+import ResetFilters from "../../components/ResetFilters";
 
 import { Content, Filters, GridCards } from "./styles";
 import { ITool } from "./types";
@@ -77,7 +78,7 @@ const Toolkit = () => {
     setResult(qs)
   }, [selectedStages, effort, time]);
 
-  const resetFilters = () => {
+  const handleResetFilters = () => {
     // Função para resetar os filtros para o estado inicial
     setEffort("0");
     setTime("0");
@@ -101,17 +102,17 @@ const Toolkit = () => {
         <Button 
           name="ANALISAR" 
           onClick={() => handleButtonFilterStage('3')}
-          variant={selectedStages.includes('3') ? "" : "secondary"}
+          variant={selectedStages.includes('3') ? "secundary" : "primary"}
         />
         <Button 
           name="PROJETAR" 
           onClick={() => handleButtonFilterStage('4')}
-          variant={selectedStages.includes('4') ? "" : "secondary"}
+          variant={selectedStages.includes('4') ? "secundary" : "primary"}
         />
         <Button 
           name="AVALIAR" 
           onClick={() => handleButtonFilterStage('5')}
-          variant={selectedStages.includes('5') ? "" : "secondary"}
+          variant={selectedStages.includes('5') ? "secundary" : "primary"}
         />
         
         <label htmlFor="effort">Esforço</label>
@@ -133,7 +134,8 @@ const Toolkit = () => {
 
         </Filters>
 
-        <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
+        <ResetFilters onClick={handleResetFilters}/>
+        
         <GridCards>
           {result.map((tool) => (
             <Link to={`${tool.id}`}>

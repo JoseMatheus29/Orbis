@@ -18,42 +18,42 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     &:hover {
         background-color: rgba(0,0,0,0.5);
     }
-
-    ${({variant}) => variant === "primary" && css`
-       background-color: #F9C0B4;
-       border: 2px solid #424B5A;
-       color: #424B5A;
-       box-shadow:  5px 5px 0 0 white, 5px 5px 0 2px #424B5A;
-
-       &:hover {
-            background-color: #424B5A;
-            color: #fff;
-       }
-
-       &:active{
-        background-color: #F9C0B4;
-        box-shadow: 5px 5px #666;
-        transform: translateY(4px);
-       }
-    `}
-
-    ${({variant}) => variant === "secondary" && css`
+   ${({variant}) => variant === "primary" && css`
        background-color: var(--background);
        border: 2px solid #424B5A;
        color: #424B5A;
        box-shadow:  5px 5px 0 0 white, 5px 5px 0 2px #424B5A;
 
        &:hover {
-            background-color: #424B5A;
-            color: #fff;
+            background-color: var(--purple_200);
        }
 
        &:active{
-        background-color: #F9C0B4;
+        background-color: var(--purple_300);
         box-shadow: 5px 5px #666;
         transform: translateY(4px);
        }
     `}
+
+    ${({variant}) => variant === "secundary" && css`
+       background-color: var(--purple_300);
+       border: 2px solid #424B5A;
+       color: var(--white);
+       box-shadow:  5px 5px 0 0 white, 5px 5px 0 2px #424B5A;
+
+       &:hover {
+            background-color: var(--purple_300);
+            color: #fff;
+       }
+
+       &:active{
+        background-color: var(--purple_300);
+        box-shadow: 5px 5px #666;
+        transform: translateY(4px);
+       }
+    `}
+
+    
 
     ${({variant}) => variant === "terciary" && css`
        background-color: #FDBC42;
