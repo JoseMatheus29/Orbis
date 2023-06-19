@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import Icon from "../../assets/icons_tools/empathy-map.svg";
+import Icon from "../../assets/icons_tools/contextual-interview.svg";
 import Button from "../Button";
 import { stageName } from "./utils";
 
