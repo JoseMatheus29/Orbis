@@ -80,8 +80,15 @@ const Toolkit = () => {
   const resetFilters = () => {
     // Função para resetar os filtros para o estado inicial
     setEffort("0");
-    setSelectedStages([]);
     setTime("0");
+    setSelectedStages([]);
+  }
+
+  const handleOnChangeSliderEffort = (event: any) => {
+    setEffort(event.target.value);
+  }
+  const handleOnChangeSliderTime = (event: any) => {
+    setTime(event.target.value);
   }
 
   
@@ -90,6 +97,7 @@ const Toolkit = () => {
       <Header />
       <Content>
         <h4>Etapas</h4>
+        <Filters>
         <Button 
           name="ANALISAR" 
           onClick={() => handleButtonFilterStage('3')}
@@ -105,30 +113,23 @@ const Toolkit = () => {
           onClick={() => handleButtonFilterStage('5')}
           variant={selectedStages.includes('5') ? "" : "secondary"}
         />
-        <Filters>
+        
         <label htmlFor="effort">Esforço</label>
 
         <Slider
           aria-label="Esforço"
-          defaultValue={3}
+          defaultValue={0}
           valueLabelDisplay="auto"
+          value={parseInt(effort)}
+          onChange={handleOnChangeSliderEffort}
           step={1}
+          size={"medium"}
           marks
           min={0}
           max={3}
           style={{width: "150px"}}
         />
 
-        {/* <input
-          type="range"
-          value={effort}
-          onChange={(e) => setEffort(e.target.value)}
-          name="effort"
-          min={0}
-          max={3}
-        /> */}
-        </Filters>
-        <Filters>
         <label htmlFor="time">Tempo</label>
 
         <Slider
@@ -136,20 +137,14 @@ const Toolkit = () => {
           defaultValue={3}
           valueLabelDisplay="auto"
           step={1}
+          size={"medium"}
+          value={parseInt(time)}
+          onChange={handleOnChangeSliderTime}
           marks
           min={0}
           max={3}
           style={{width: "150px"}}
         />
-
-        {/* <input
-          type="range"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
-          name="time"
-          min={0}
-          max={3}
-        /> */}
         </Filters>
 
         <Button name="LIMPAR FILTROS" onClick={resetFilters}/>
