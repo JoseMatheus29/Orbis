@@ -1,3 +1,5 @@
+import { ResetFiltersStyle } from "./styles";
+
 interface IResetFilters {
     onClick:() => void;
 }
@@ -5,9 +7,9 @@ interface IResetFilters {
 const ResetFilters = ({onClick}: IResetFilters) => {
     return(
         <>
-            <div onClick={onClick} >
+            <ResetFiltersStyle  onClick={onClick} >
                 Limpar Filtros
-            </div>
+            </ResetFiltersStyle >
         </>
     )
 }   

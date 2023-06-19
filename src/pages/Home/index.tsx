@@ -1,4 +1,3 @@
-import { useState } from "react";
 //import { useStages } from "../../hooks/useStages";
 import { useNavigate } from "react-router-dom";
 
@@ -19,16 +18,15 @@ const Home = () => {
 
     // Pegando as etapas do DCU na API
    // const { stages } = useStages();
-    const [description, setDecription] = useState('');
    
 
     // Navegação da páginas
     const navigate = useNavigate ();
 
-    const handleButton = (des: string) => {
-        console.log(des)
-        setDecription(des);
-    }
+    // const handleButton = (des: string) => {
+    //     console.log(des)
+    //     setDecription(des);
+    // }
     const handleNavigateForm = () => {
         navigate('/form');
     }
