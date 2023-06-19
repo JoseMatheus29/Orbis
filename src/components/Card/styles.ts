@@ -50,12 +50,12 @@ export const Container = styled.div<ICardStyle>`
     }
     ${({variant}) => variant === "analyzes" && css`
        background-color: var(--purple_100);
-       border: 2px solid var(--purple_300);
+       border: 3px solid var(--purple_300);
        box-shadow: 3px 3px 0px var(--purple_400);
     `}
     ${({variant}) => variant === "design" && css`
        background-color: var(--yellow_100);
-       border: 2px solid var(--yellow_300);
+       border: 3px solid var(--yellow_300);
        box-shadow: 3px 3px 0px var(--yellow_400);
        div{
         background-color: var(--yellow_300);
@@ -63,7 +63,7 @@ export const Container = styled.div<ICardStyle>`
     `}
     ${({variant}) => variant === "evaluate" && css`
         background-color: var(--blue_100);
-        border: 2px solid var(--blue_300);
+        border: 3px solid var(--blue_300);
         box-shadow: 3px 3px 0px var(--blue_400);
         div{
             background-color: var(--blue_300);
