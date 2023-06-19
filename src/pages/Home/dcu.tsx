@@ -31,14 +31,9 @@ export const Etapas = () => {
     <>
       <Animation>
         <h1>Processo de design centrado no usuário</h1>
-        <div className="triangularBottom1">
-          <button className="meuBotaoA ">Analisar</button>
-        </div>
-        <div className="triangularBottom2">
-          <button className="meuBotaoP ">Projetar</button>
-          <button className="meuBotaoAV ">Avaliar</button>
-        </div>
-        <div className="quadradoExplicativo">Texto explicativo</div>
+        <button className="circle">Analisar</button>
+        <button className="circle">Projetar</button>
+        <button className="circle">Avaliar</button>
       </Animation>
     </>
   );
