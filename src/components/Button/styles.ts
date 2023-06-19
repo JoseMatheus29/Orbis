@@ -7,7 +7,8 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     border-radius: 8px;
     padding: 16px 24px;
     font-size: 1rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     color: #ffffff;
     cursor: pointer;
     border: none;

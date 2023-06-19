@@ -36,12 +36,20 @@ export const Main = styled.main`
     }
 `
 export const Section = styled.section`
-    background-color: #F2F5F7;
-    padding: 60px 0;    
+    background-color: #FFE9B0;
+    padding: 74px 64px; 
+    margin:  70px 125px;
+    border-radius: 5%;
+    border-color: #F29F19;
+    box-shadow: 5px 5px 0 #F29F19;
 
     h1 {
+        font-family: "Sansita", sans-serif;
         font-size: 3rem;
         font-weight: 500;
+    }
+    p{
+        font-family: "Raleway", sans-serif;
     }
 `
 export const TextsRow = styled.div`
@@ -49,11 +57,17 @@ export const TextsRow = styled.div`
     flex-direction: row;
     column-gap: 50px;
     align-items: center;
+    justify-content: center;
+    
 
     p {
         line-height: 160%;
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    img{
+        width: 50%;
     }
 `
 
@@ -92,4 +106,8 @@ export const Column = styled.div`
         color: #474747;
         font-family: 'Raleway', sans-serif;
     }
+
+`
+export const Animation = styled.div`
+
 `

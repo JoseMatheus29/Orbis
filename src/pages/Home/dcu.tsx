@@ -1,5 +1,5 @@
 import Imagem from "../../assets/imagem.svg";
-import { Content, Section, TextsRow } from "./styles";
+import { Content, Section, TextsRow, Animation } from "./styles";
 
 const DCU = () => {
   return (
@@ -9,15 +9,12 @@ const DCU = () => {
           <h1>O que é Design Centrado no Usuário?</h1>
 
           <TextsRow>
-            <img src={Imagem} alt="Imagem" />
+            <img src={Imagem} alt="A imagem possui:'D' 'C' 'U' em letras coloridas " />
             <p>
               Donald Norman, pesquisador de ciência cognitiva e um dos maiores
               influenciadores sobre design, defende que um bom design requer uma
               comunicação clara entre pessoas e as máquinas e sistemas que elas
-              precisam utilizar no cotidiano.
-            </p>
-            <p>
-              Com base nessa ideia, ele criou o termo Design Centrado no Usuário
+              precisam utilizar no cotidiano. Com base nessa ideia, ele criou o termo Design Centrado no Usuário
               (DCU), uma abordagem de design em que a construção de soluções de
               design vão de encontro às necessidades dos usuários.
             </p>
@@ -32,7 +29,8 @@ export default DCU;
 export const Etapas = () => {
   return (
     <>
-      <div className="botao">
+      <Animation>
+        <h1>Processo de design centrado no usuário</h1>
         <div className="triangularBottom1">
           <button className="meuBotaoA ">Analisar</button>
         </div>
@@ -41,7 +39,7 @@ export const Etapas = () => {
           <button className="meuBotaoAV ">Avaliar</button>
         </div>
         <div className="quadradoExplicativo">Texto explicativo</div>
-      </div>
+      </Animation>
     </>
   );
 }
