@@ -5,22 +5,22 @@ export const GlobalStyle = createGlobalStyle`
         --background: #FCF0F0;
         --text: #272727;
         --white: #ffffff;
-        --purple_100: #F5EEFF;
+        --purple_100: #DCD6F0;
         --purple_200: #CDBDFF;
-        --purple_300: #9882E3;
-        --purple_400: #644FAC;
+        --purple_300: #5C45A5;
+        --purple_400: #4E3894;
         --red_100: #FFEDE9;
         --red_200: #FFB4A4;
         --red_300: #F46142;
         --red_400: #AF3015;
-        --blue_100: #BFF4F8;
-        --blue_200: #2DB5BD;
-        --blue_300: #19888F;
-        --blue_400: #13666B;
-        --yellow_100: #FEE98B;
+        --blue_100: #A3E8EC;
+        --blue_200: #12AAB5;
+        --blue_300: #12AAB5;
+        --blue_400: #19888F;
+        --yellow_100: #FFE9B0;
         --yellow_200: #FED366;
-        --yellow_300: #FDBC42;
-        --yellow_400: #FCA61D;
+        --yellow_300: #FCA61D;
+        --yellow_400: #EA9B1D;
     }
 
     html {

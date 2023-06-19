@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { ICardStyle } from './types'
 
-export const Container = styled.div`
+export const Container = styled.div<ICardStyle>`
     min-height: 330px;
     width: 240px;
     padding: 16px;
@@ -33,15 +34,39 @@ export const Container = styled.div`
         text-align: center;
     }
 
-    button {
+    div {
         position: absolute;
+        gap: 10px;
+        height: 30px;
         padding: 4px 16px;
-        border-radius: 0 0 8px 8px;
-        font-size: 1rem;
+        border-radius: 0 0 20px 20px;
+        font-size: 1.2rem;
         font-family: 'Ubuntu';
         font-style: normal;
+        color: #fff;
         font-weight: 500;
         background: #725AC1;
         top: 0px;
     }
+    ${({variant}) => variant === "analyzes" && css`
+       background-color: var(--purple_100);
+       border: 2px solid var(--purple_300);
+       box-shadow: 3px 3px 0px var(--purple_400);
+    `}
+    ${({variant}) => variant === "design" && css`
+       background-color: var(--yellow_100);
+       border: 2px solid var(--yellow_300);
+       box-shadow: 3px 3px 0px var(--yellow_400);
+       div{
+        background-color: var(--yellow_300);
+       }
+    `}
+    ${({variant}) => variant === "evaluate" && css`
+        background-color: var(--blue_100);
+        border: 2px solid var(--blue_300);
+        box-shadow: 3px 3px 0px var(--blue_400);
+        div{
+            background-color: var(--blue_300);
+        }
+    `}
 `

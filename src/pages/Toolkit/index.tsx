@@ -141,6 +141,8 @@ const Toolkit = () => {
                 name_pt={tool.name_pt}
                 stage_id={tool.Stage_idStage}
                 name_en={tool.name_en}
+                variant={tool.templateName}
+                icon={tool.icon}
               />
             </Link>
           ))}
