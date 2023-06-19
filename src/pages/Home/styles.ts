@@ -6,7 +6,6 @@ export const Main = styled.main`
     align-items: center;
     flex-direction: row;
     column-gap: 30px;
-    color: #505D68;
 
     h1 {
       font-size: 5rem;
@@ -39,9 +38,10 @@ export const Section = styled.section`
     background-color: #FFE9B0;
     padding: 74px 64px; 
     margin:  70px 125px;
-    border-radius: 5%;
+    border-radius: 20px;
     border-color: #F29F19;
     box-shadow: 5px 5px 0 #F29F19;
+    color: #474747;
 
     h1 {
         font-family: "Sansita", sans-serif;
@@ -58,16 +58,14 @@ export const TextsRow = styled.div`
     column-gap: 50px;
     align-items: center;
     justify-content: center;
+    padding: 4% 0;
     
 
     p {
         line-height: 160%;
         font-size: 1rem;
         font-weight: 400;
-    }
-
-    img{
-        width: 50%;
+        
     }
 `
 
@@ -109,5 +107,76 @@ export const Column = styled.div`
 
 `
 export const Animation = styled.div`
+padding-bottom: 20%;
+
+    h1{
+        color: #474747;
+        font-family: 'Sansita', sans-serif;
+    }
+.circles{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.circle1{
+  background-color: #9882E3;
+  box-shadow: 3px 7px 0 #725AC1;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 1450px;
+  left: 150px;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.circle2 {
+  background-color: #FDBC42;
+  box-shadow: 3px 7px 0 #F29F19;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 1650px;
+  left: 80px;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.circle3 {
+  background-color: #19888F;
+  border: none;
+  box-shadow: 3px 7px 0 #136469;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 1650px;
+  left: 250px;
+  transform: translateX(-50%);
+  color: white;
+}
 
 `

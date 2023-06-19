@@ -7,12 +7,13 @@ import Header from "../../components/Header";
 import { Footer } from "../../components/Footer";
 
 
-import { Content, Arrow, Row, Column, Main } from "./styles";
+import { Content, Arrow, Row, Column, Main, Animation } from "./styles";
 
-import Orbis from "../../assets/orbis-home.svg";
+import Orbis from "../../assets/orbis_home.svg";
 import Seta from "../../assets/seta-home.svg";
 
 import DCU from "./dcu";
+
 
 const Home = () => {
 
@@ -65,6 +66,7 @@ const Home = () => {
         </Content>
 
         <DCU/>
+        <Animation/>
         <Footer/>
         
          {/* {stages.map( (stage) => <Button name={ stage.name } key={stage.id} onClick={() => handleButton(stage.description) } /> ) }

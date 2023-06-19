@@ -1,4 +1,4 @@
-import Imagem from "../../assets/imagem.svg";
+import Imagem from "../../assets/dcu.svg";
 import { Content, Section, TextsRow, Animation } from "./styles";
 
 const DCU = () => {
@@ -21,6 +21,7 @@ const DCU = () => {
           </TextsRow>
         </Content>
       </Section>
+      <Etapas/>
     </>
   );
 };
@@ -29,12 +30,16 @@ export default DCU;
 export const Etapas = () => {
   return (
     <>
+    <Content>
       <Animation>
         <h1>Processo de design centrado no usuário</h1>
-        <button className="circle">Analisar</button>
-        <button className="circle">Projetar</button>
-        <button className="circle">Avaliar</button>
+        <div className="circles">
+        <button className="circle1">Analisar</button>
+        <button className="circle2">Projetar</button>
+        <button className="circle3">Avaliar</button>
+        </div>
       </Animation>
+    </Content>
     </>
   );
 }

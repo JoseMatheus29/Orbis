@@ -21,9 +21,10 @@ export const Content = styled.div`
     .logo a{
         
         h1 {
-            font-family: 'DM Serif Display', serif;
+            font-family: 'Sansita', serif;
             font-weight: normal;
             font-size: 2.25rem;
+            color: var(--white);
         }
         display: flex;
         gap: 12px;
