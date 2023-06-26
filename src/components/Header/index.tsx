@@ -1,21 +1,19 @@
 import { Container, Content, List } from "./styles"
 import Logo from "../../assets/logo-orbis.svg"
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom';
 
 
 const Header = () => {
 
-    const location = useLocation();
+    // const location = useLocation();
 
     // const [ isHome, setIsHome ] = useState(false);
 
-    useEffect(() => {
-        if(location.pathname === '/') {
-            setIsHome(true);
-        }
-    }, [ location.pathname ])
+    // useEffect(() => {
+    //     if(location.pathname === '/') {
+    //         setIsHome(true);
+    //     }
+    // }, [ location.pathname ])
 
     return(
         <Container>
