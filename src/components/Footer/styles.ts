@@ -1,12 +1,21 @@
 
 import styled from "styled-components";
+
 export const Rodape = styled.div`
-        background-color: #F46142;
+        margin-top: 60px;
+        background-color: var(--red_200);
         color: white;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding: 1% 0;
+        justify-content: center;
+        padding: 16px;
+        column-gap: 24px;
+
+    p {
+        color: white;
+        font-weight: 600;
+    }
 
     .rodape_1{
         display: flex;

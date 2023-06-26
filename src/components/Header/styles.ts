@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: var(--red_300);
-    height: 75px;
+    background-color: var(--red_200);
+    height: 70px;
     display: flex;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
 `
 
 export const Content = styled.div`
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
 
     display: flex;
@@ -21,7 +21,7 @@ export const Content = styled.div`
     .logo a{
         
         h1 {
-            font-family: 'Sansita', serif;
+            font-family: 'Caprasimo', serif;
             font-weight: normal;
             font-size: 2.25rem;
             color: var(--white);
@@ -40,17 +40,7 @@ export const List = styled.ul`
 
     li a{
         font-size: 1rem;
+        font-weight: 600;
         color: var(--white);
     }
-
-    /* input {
-        padding: 8px 12px;
-        width: 240px;
-        border-radius: 4px;
-        outline: none;
-        border: 2px solid #C2D1D9;
-        color: #C2D1D9;
-        font-family: 'Ubuntu', sans-serif;
-
-    } */
 `

@@ -3,15 +3,13 @@ import { IButtonStyle } from './types';
 
 export const ButtonStyle = styled.button<IButtonStyle>`
     position: relative;
-    background-color: #505D68 ;
     border-radius: 8px;
-    padding: 16px 24px;
+    padding: 12px 8px;
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     color: #ffffff;
     cursor: pointer;
-    border: none;
     transition: .2s;
     margin: 1%;
 
@@ -20,30 +18,23 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     }
    ${({variant}) => variant === "primary" && css`
        background-color: var(--background);
-       border: 2px solid #424B5A;
-       color: #424B5A;
-       box-shadow:  5px 5px 0 0 white, 5px 5px 0 2px #424B5A;
+       border: 2px solid var(--red_200);
+       color: var(--text);
+       box-shadow:  5px 5px 0 0 var(--red_200);
 
        &:hover {
-            background-color: var(--purple_200);
-       }
-
-       &:active{
-        background-color: var(--purple_300);
-        box-shadow: 5px 5px #666;
-        transform: translateY(4px);
+            background-color: var(--red_100);
        }
     `}
 
-    ${({variant}) => variant === "secundary" && css`
-       background-color: var(--purple_300);
-       border: 2px solid #424B5A;
-       color: var(--white);
-       box-shadow:  5px 5px 0 0 white, 5px 5px 0 2px #424B5A;
+    ${({variant}) => variant === "secondary" && css`
+       background-color: transparent;
+       border: 2px solid var(--text);
+       color: var(--text);
+       box-shadow:  5px 5px 0 0 var(--text);
 
        &:hover {
-            background-color: var(--purple_300);
-            color: #fff;
+            background-color: var(--red_100);
        }
 
        &:active{

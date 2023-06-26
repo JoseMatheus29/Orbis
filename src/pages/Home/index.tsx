@@ -1,32 +1,29 @@
-//import { useStages } from "../../hooks/useStages";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button";
 import Header from "../../components/Header";
-import { Footer } from "../../components/Footer";
+import NameOrbis from '../../assets/name_orbis.svg';
+import DCU from "../../assets/dcu.svg";
 
+import Valeska from "../../assets/team/valeska.svg";
+import Ticianne from "../../assets/team/ticianne.svg";
 
-import { Content, Arrow, Row, Column, Main, Animation } from "./styles";
+import { Content,  Row, Column, Main, Section, Center, Stages, AboutContainer, IdealizerContainer, Idealizer, DevsContainer, GridDevs } from "./styles";
 
 import Orbis from "../../assets/orbis_home.svg";
-import Seta from "../../assets/seta-home.svg";
-
-import DCU from "./dcu";
+import SectionHome from "../../assets/section-home.svg";
+import SectionAbout from "../../assets/section_about_orbis.svg";
+import Graphics from "../../assets/graphics.svg";
+import CardStage from "../../components/CardStage";
+import CardDev from "../../components/CardDev";
+import { Footer } from "../../components/Footer";
 
 
 const Home = () => {
 
-    // Pegando as etapas do DCU na API
-   // const { stages } = useStages();
-   
-
     // Navegação da páginas
     const navigate = useNavigate ();
 
-    // const handleButton = (des: string) => {
-    //     console.log(des)
-    //     setDecription(des);
-    // }
     const handleNavigateForm = () => {
         navigate('/form');
     }
@@ -40,35 +37,117 @@ const Home = () => {
         <Content>
         <Main>
             <Column>
-                <h1>Orbis</h1>
+                <img src={ NameOrbis } alt="Orbis" id="name_orbis"/>
                 <h2>Toolkit de Design Centrado no Usuário </h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit blanditiis dignissimos nisi velit autem sed, odio corrupti quasi dolorum ipsum placeat aliquid deserunt quas sequi sunt dolorem similique esse ut?</p>
+                <p>O Orbis 2.0 é um toolkit digital interativo que tem como objetivo guiá-lo por sua jornada pelo Design Centrado no Usuário (DCU).</p>
                     
                 <Row>
                     <Button
-                    name="Me ajude a escolher!"
+                    name="Recomendação"
                     onClick={handleNavigateForm}
                     />
                     <Button
-                    variant="secondary"
                     name="Acessar Toolkit"
                     onClick={handleNavigateToolkit}
+                    variant="secondary"
                     />
                 </Row>
             </Column>
             <img src={Orbis} alt="Orbis é uma bussóla com bigode e muito simpática" />     
         </Main>
-        <Arrow>
-                <img src={Seta} alt="Seta para baixo" />
-        </Arrow>
         </Content>
 
-        <DCU/>
-        <Animation/>
+        <Section>
+            <img src={SectionHome} id="section-home" />
+            <Content>
+                <Center>
+                    <Column>
+                    <h1>
+                        Design Centrado <br/> no Usuário 
+                    </h1>
+                    <p>
+                        Donald Norman, pesquisador de ciência cognitiva e um dos maiores influenciadores sobre design, defende que um bom design requer uma comunicação clara entre pessoas e as máquinas e sistemas que elas precisam utilizar no cotidiano.
+                    </p>
+
+                    <p>
+                        Com base nessa ideia, ele criou o termo Design Centrado no Usuário (DCU), uma abordagem de design em que a construção de soluções de design vão de encontro às necessidades dos usuários.
+                    </p>
+                    </Column>
+
+                    <img src={DCU} id="DCU"/>
+
+                </Center>
+            </Content>
+            <img src={ Graphics } id="graphics" />
+            <Content>
+                <Stages>
+                    <h1>Etapas do DCU</h1>
+                    <CardStage
+                        name="Analisar"
+                        template="analyses"
+                        description="Identificar quem são os principais usuários de um produto e a natureza do problema. Nesta etapa o designer deve se aproximar dos usuários e observar suas atividades, na tentativa de entender interesses, motivações e necessidades. A compreensão adequada do problema é proveniente do conhecimento aprofundado sobre aquilo que as pessoas desejam realizar e os impedimentos existentes na experiência atual. "
+                    />
+                    <CardStage
+                        name="Projetar"
+                        template="design"
+                        description="Nessa etapa são desenvolvidas propostas de soluções que contemplem os requisitos estabelecidos para o sistema. A criação da proposta utiliza o estudo dos usuários como embasamento durante seu desenvolvimento. É o momento de exercício da criatividade, e os principais fundamentos da etapa são a geração de muitas ideias, o respeito às ideias que surgem, evitando criticismo no início do processo, e o questionamento constante sobre a adequação das soluções."
+                    />
+                    <CardStage
+                        name="Avaliar"
+                        template="evaluate"
+                        description="Verificar se a solução proposta está alinhada com os requisitos estabelecidos anteriormente e se satisfaz às necessidades dos usuários em seus diferentes contextos de uso. É durante as avaliações que a aceitação do design e a qualidade de uso são verificados. Podem ser feitas avaliações por especialistas ou com usuários. No último caso, é necessário identificar pessoas que fazem parte do público-alvo da solução e reuni-las para testar uma ideia. A avaliação é seguida por ciclos de iteração, em que acontecem o refinamento das ideias e a melhoria contínua da solução."
+                    />
+                </Stages>
+            </Content>
+            <img src={SectionAbout} id="section-about"/>
+            <Content>
+                <AboutContainer>
+                    <Column>
+                        <h3>Sobre o</h3>
+                        <img src={ NameOrbis } alt="Orbis" id="name_orbis_about"/>
+                    </Column>
+
+                    <p>O Orbis 2.0 é uma adaptação do Orbis, um toolkit de Design Centrado no Usuário de 15 cartas físicas. A versão digital interativa foi desenvolvida com objetivo de promover o maior acesso a uma ferramenta educativa de fácil utilização e compreensão aos interessados em aprender sobre o DCU e em como aplicar suas técnicas no processo de design de um projeto.</p>
+                </AboutContainer>
+                <Center>
+                    <Column>
+                    <h1>Idealizadoras</h1>
+                    <IdealizerContainer>
+                        <Idealizer>
+                            <img src={ Valeska } alt="" />
+                            <h4>Valeska Eduardo</h4>
+                            <p>
+                            Profissional com 6+ anos em TI, com formação acadêmica em Sistemas e Mídias Digitais, e ênfase em Interação Humano Computador e Desenvolvimento de Sistemas. Atualmente reside no Canadá para um intercâmbio focado em imersão em inglês e francês.
+                            </p>
+                        </Idealizer>
+                        <Idealizer>
+                            <img src={ Ticianne } alt="" />
+                            <h4>Ticianne Darin</h4>
+                            <p>
+                            Professora Adjunta da Universidade Federal do Ceará (UFC), onde ministra disciplinas e realiza pesquisas nas áreas de Interação Humano-Computador e Design e Jogos Digitais.
+                            </p>
+                        </Idealizer>
+                    </IdealizerContainer>
+                    </Column>
+                </Center>
+                <DevsContainer>
+                    <h1>
+                        Desenvolvedores
+                    </h1>
+                    <GridDevs>
+                        <CardDev/>
+                        <CardDev/>
+                        <CardDev/>
+                        <CardDev/>    
+                        <CardDev/>
+                        <CardDev/>
+                    </GridDevs>     
+
+                </DevsContainer>
+                
+            </Content>
+        </Section>
         <Footer/>
-        
-         {/* {stages.map( (stage) => <Button name={ stage.name } key={stage.id} onClick={() => handleButton(stage.description) } /> ) }
-         <p>{description}</p> */}
         </>
     )
 }

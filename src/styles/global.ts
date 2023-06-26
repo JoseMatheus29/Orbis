@@ -6,13 +6,11 @@ export const GlobalStyle = createGlobalStyle`
         --text: #272727;
         --white: #ffffff;
         --purple_100: #DCD6F0;
-        --purple_200: #CDBDFF;
-        --purple_300: #5C45A5;
-        --purple_400: #4E3894;
-        --red_100: #FFEDE9;
-        --red_200: #FFB4A4;
-        --red_300: #F46142;
-        --red_400: #AF3015;
+        --purple_200: #9882E3;
+        --purple_300: #4C3692;
+        --red_100: #FFDAD3;
+        --red_200: #F46142;
+        --red_300: #AF3015;
         --blue_100: #A3E8EC;
         --blue_200: #12AAB5;
         --blue_300: #12AAB5;
@@ -24,7 +22,17 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font-size: 16px;
+        @media (max-width: 1080px) {
+            font-size: 93.75%; 
+        }
+
+        @media (max-width: 720px) {
+            font-size: 87.5%;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 81.25%;
+        }
     }
 
     body {
@@ -34,9 +42,14 @@ export const GlobalStyle = createGlobalStyle`
     body, h1, h2, h3, p{
         margin: 0;
         padding: 0;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Raleway', sans-serif;
+        font-weight: normal;
         color: var(--text);
-        box-sizing: border-box;
+        
+    }
+
+    p {
+        font-weight: 600;
     }
 
     * {
@@ -44,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         text-decoration: none;
         list-style: none;
-        
+        box-sizing: border-box;
     }
 
 
@@ -56,6 +69,6 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
         border: 1px solid #C2D1D9;
         color: #C2D1D9;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Raleway', sans-serif;
     }
 `

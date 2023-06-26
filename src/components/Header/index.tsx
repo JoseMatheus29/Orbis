@@ -30,15 +30,15 @@ const Header = () => {
                 <nav>
                   
                     <List>
-                        {isHome ? 
+                        {/* {isHome ? 
                             <InputTools/>
                             :
-                            null}
+                            null} */}
                         <li>
                             <Link to="/toolkit">Acessar o Toolkit</Link>
                         </li>
                         <li>
-                            <Link to="/form">Me ajude a escolher</Link>
+                            <Link to="/form">Recomendação</Link>
                         </li>
                     </List>
                 </nav>
