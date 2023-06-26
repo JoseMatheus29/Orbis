@@ -3,14 +3,13 @@ import Logo from "../../assets/logo-orbis.svg"
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
-import InputTools from "../InputTools";
 
 
 const Header = () => {
 
     const location = useLocation();
 
-    const [ isHome, setIsHome ] = useState(false);
+    // const [ isHome, setIsHome ] = useState(false);
 
     useEffect(() => {
         if(location.pathname === '/') {
