@@ -13,7 +13,10 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     background: var(--white);
     cursor: pointer;
     transition: .2s;
-    box-shadow:  5px 5px 0 0 var(--white) 2px 2px 0 0 var(--text);
+    box-shadow: 5px 5px var(--white), 8px 8px var(--text);
+    
+
+    
 
    ${({variant}) => variant === "primary" && css`
        background-color: var(--background);

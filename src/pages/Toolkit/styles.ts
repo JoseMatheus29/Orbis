@@ -45,7 +45,7 @@ column-gap: 60px;
 export const ButtonGroup = styled.div`
     display: flex;
     flex-direction: row;
-
+    border-radius: 8px;
     button {
         margin: 0;
         padding: 12px 16px; 
