@@ -1,4 +1,5 @@
 import { ResetFiltersStyle } from "./styles";
+import Reset from '../../assets/icon/close.svg';
 
 interface IResetFilters {
     onClick:() => void;
@@ -8,7 +9,7 @@ const ResetFilters = ({onClick}: IResetFilters) => {
     return(
         <>
             <ResetFiltersStyle  onClick={onClick} >
-                Limpar Filtros
+                <img src={Reset} alt="" />Limpar Filtros
             </ResetFiltersStyle >
         </>
     )

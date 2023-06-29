@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`  
-    padding-top: 60px;
+    padding-top: 100px;
     display: flex;
     column-gap: 5%;
     align-items: center;
@@ -33,8 +33,7 @@ export const Main = styled.main`
     }
 
     img {
-        width: 55%;
-        max-width: 583.35px;
+        width: 50%;
     }
 
 
@@ -92,7 +91,8 @@ export const Center = styled.div`
 `
 
 export const Content = styled.div`
-    max-width: 80vw;
+    width: 80%;
+    max-width: 1440px;
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;

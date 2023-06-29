@@ -4,7 +4,7 @@ export const Container = styled.div`
     border: 3px solid var(--text);
     border-radius: 20px;
     background-color: var(--purple_100);
-    box-shadow: 3px 3px 0px var(--text);
+    box-shadow: 4px 4px 0px var(--text);
     min-height: 400px;
     width: 280px;
     padding: 16px;

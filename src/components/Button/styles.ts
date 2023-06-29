@@ -8,14 +8,13 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text);
+    border: 2px solid var(--text);
+    background: var(--white);
     cursor: pointer;
     transition: .2s;
-    margin: 1%;
+    box-shadow:  5px 5px 0 0 var(--white) 2px 2px 0 0 var(--text);
 
-    &:hover {
-        background-color: rgba(0,0,0,0.5);
-    }
    ${({variant}) => variant === "primary" && css`
        background-color: var(--background);
        border: 2px solid var(--red_200);
@@ -28,7 +27,7 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     `}
 
     ${({variant}) => variant === "secondary" && css`
-       background-color: transparent;
+       background-color: var(--white);
        border: 2px solid var(--text);
        color: var(--text);
        box-shadow:  5px 5px 0 0 var(--text);

@@ -7,9 +7,10 @@ import Card from "../../components/Card";
 import Header from "../../components/Header";
 import ResetFilters from "../../components/ResetFilters";
 
-import { Content, Filters, GridCards } from "./styles";
+import { ContainerSlider, Content, Filters, GridCards,ButtonGroup } from "./styles";
 import { ITool } from "./types";
 import SliderFilter from "../../components/SliderFilter";
+import Skeleton from "@mui/material/Skeleton";
 
 const Toolkit = () => {
   // Estado que recebe todos os métodos disponíveis no toolkit por meio de uma requisição get
@@ -21,6 +22,7 @@ const Toolkit = () => {
   const [effort, setEffort] = useState<string>("0"); // Iniciar do 0
   const [time, setTime] = useState("0"); // Inicia do 0
   const [selectedStages, setSelectedStages] = useState<string[]>([]); // Inicia com todos selecionados
+  const [ isLoading, setIsLoading ] = useState(true);
 
   // Estado do tipo boleano que verifica se foi aplicado algum filtro no toolkit
   //const [isFilter, setIsFilter] = useState(false);
@@ -37,7 +39,16 @@ const Toolkit = () => {
 
 
   useEffect(() => {
-    api.get("/Tools/list").then((response) => {setAllTools(response.data); setResult(response.data)});
+    setIsLoading(true);
+
+    api.get("/Tools/list").then((response) => { 
+      setAllTools(response.data);
+      setResult(response.data)
+      if(response.status == 200) {
+        setIsLoading(false);
+      }
+    })
+
   }, []);
 
   const filter = (queryset: ITool[], key: string, value: string) => {
@@ -97,33 +108,41 @@ const Toolkit = () => {
     <>
       <Header />
       <Content>
-        <h4>Etapas</h4>
-        <Filters>
-        <Button 
-          name="ANALISAR" 
-          onClick={() => handleButtonFilterStage('3')}
-          variant={selectedStages.includes('3') ? "secundary" : "primary"}
-        />
-        <Button 
-          name="PROJETAR" 
-          onClick={() => handleButtonFilterStage('4')}
-          variant={selectedStages.includes('4') ? "secundary" : "primary"}
-        />
-        <Button 
-          name="AVALIAR" 
-          onClick={() => handleButtonFilterStage('5')}
-          variant={selectedStages.includes('5') ? "secundary" : "primary"}
-        />
+        <h1>Toolkit</h1>
         
+        <Filters>
+        
+        <ContainerSlider>
+          <h4>Etapas</h4>
+          <ButtonGroup>
+              <Button 
+                name="ANALISAR" 
+                onClick={() => handleButtonFilterStage('3')}
+                variant={selectedStages.includes('3') ? "secondary" : ""}
+              />
+              <Button 
+                name="PROJETAR" 
+                onClick={() => handleButtonFilterStage('4')}
+                variant={selectedStages.includes('4') ? "secondary" : ""}
+              />
+              <Button 
+                name="AVALIAR" 
+                onClick={() => handleButtonFilterStage('5')}
+                variant={selectedStages.includes('5') ? "secondary" : ""}
+              />
+          </ButtonGroup>
+        </ContainerSlider>
+        
+        <ContainerSlider>
         <label htmlFor="effort">Esforço</label>
         <SliderFilter
           ariaLabel={"Esforço"}
           onChange={handleOnChangeSliderEffort}
           value={effort}
-
         />
+        </ContainerSlider>
 
-
+        <ContainerSlider>
         <label htmlFor="time">Tempo</label>
 
         <SliderFilter
@@ -131,7 +150,7 @@ const Toolkit = () => {
           onChange={handleOnChangeSliderTime}
           value={time}
         />
-
+        </ContainerSlider>
         </Filters>
 
         <ResetFilters onClick={handleResetFilters}/>
@@ -148,13 +167,23 @@ const Toolkit = () => {
               />
             </Link>
           ))}
+          {
+            !isLoading ? null : <><SkeletonCard/><SkeletonCard/><SkeletonCard/><SkeletonCard/><SkeletonCard/><SkeletonCard/></>
+          }
+          {
+            !isLoading && result.length <= 0 ? <h1>Nenhuma ferramenta encontrada!</h1> : null
+          }
         </GridCards>
-        {
-          result.length ? null : "Nao possui ferramentas"
-        }
+       
       </Content>
     </>
   );
 };
 
 export default Toolkit;
+
+const SkeletonCard = () => {
+  return (
+    <Skeleton  variant="rounded" width={240} height={340} />
+  )
+}

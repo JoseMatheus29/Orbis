@@ -38,7 +38,7 @@ const Home = () => {
         <Main>
             <Column>
                 <img src={ NameOrbis } alt="Orbis" id="name_orbis"/>
-                <h2>Toolkit de Design Centrado no Usuário </h2>
+                <h2>Toolkit de Design Centrado <br/> no Usuário </h2>
                 <p>O Orbis 2.0 é um toolkit digital interativo que tem como objetivo guiá-lo por sua jornada pelo Design Centrado no Usuário (DCU).</p>
                     
                 <Row>

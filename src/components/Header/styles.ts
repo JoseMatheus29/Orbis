@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Content = styled.div`
     width: 80%;
     margin: 0 auto;
-
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center; 
