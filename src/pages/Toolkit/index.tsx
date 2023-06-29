@@ -13,19 +13,18 @@ import SliderFilter from "../../components/SliderFilter";
 import Skeleton from "@mui/material/Skeleton";
 
 const Toolkit = () => {
-  // Estado que recebe todos os métodos disponíveis no toolkit por meio de uma requisição get
+
   const [allTools, setAllTools] = useState<ITool[]>([]);
-  // Estado que rendezira os métodos na tela, ele pode sofrer alterações por meio dos filtros 
   const [result, setResult] = useState<ITool[]>([]);
 
   // Estados dos filtros, que podem ser alterados por meio dos inputs/buttons de filtros
   const [effort, setEffort] = useState<string>("0"); // Iniciar do 0
   const [time, setTime] = useState("0"); // Inicia do 0
   const [selectedStages, setSelectedStages] = useState<string[]>([]); // Inicia com todos selecionados
-  const [ isLoading, setIsLoading ] = useState(true);
 
-  // Estado do tipo boleano que verifica se foi aplicado algum filtro no toolkit
-  //const [isFilter, setIsFilter] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(true);
+  const [ isFilter, setIsFilter ] = useState(false);
+
 
   const handleButtonFilterStage = (stage: string) => {
     // Verifica se a etapa clicada está selecionada ou não
@@ -52,6 +51,7 @@ const Toolkit = () => {
   }, []);
 
   const filter = (queryset: ITool[], key: string, value: string) => {
+    setIsFilter(true);
     const filteredTools = queryset.filter((tool) => {
       // @ts-ignore
       return tool[key] == value;
@@ -94,6 +94,7 @@ const Toolkit = () => {
     setEffort("0");
     setTime("0");
     setSelectedStages([]);
+    setIsFilter(false);
   }
 
   const handleOnChangeSliderEffort = (event: any) => {
@@ -118,17 +119,17 @@ const Toolkit = () => {
               <Button 
                 name="ANALISAR" 
                 onClick={() => handleButtonFilterStage('3')}
-                variant={selectedStages.includes('3') ? "secondary" : ""}
+                variant={selectedStages.includes('3') ? "analyses" : ""}
               />
               <Button 
                 name="PROJETAR" 
                 onClick={() => handleButtonFilterStage('4')}
-                variant={selectedStages.includes('4') ? "secondary" : ""}
+                variant={selectedStages.includes('4') ? "design" : ""}
               />
               <Button 
                 name="AVALIAR" 
                 onClick={() => handleButtonFilterStage('5')}
-                variant={selectedStages.includes('5') ? "secondary" : ""}
+                variant={selectedStages.includes('5') ? "evaluate" : ""}
               />
           </ButtonGroup>
         </ContainerSlider>
@@ -153,7 +154,7 @@ const Toolkit = () => {
         </ContainerSlider>
         </Filters>
 
-        <ResetFilters onClick={handleResetFilters}/>
+        <ResetFilters onClick={handleResetFilters} className={!isFilter ? "opacity" : "" }/>
         
         <GridCards>
           {result.map((tool) => (

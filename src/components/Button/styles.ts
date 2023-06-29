@@ -13,10 +13,7 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     background: var(--white);
     cursor: pointer;
     transition: .2s;
-    box-shadow: 5px 5px var(--white), 8px 8px var(--text);
-    
-
-    
+    box-shadow:  5px 5px 0 0 var(--white), 5px 5px 0 2px var(--text);
 
    ${({variant}) => variant === "primary" && css`
        background-color: var(--background);
@@ -38,31 +35,34 @@ export const ButtonStyle = styled.button<IButtonStyle>`
        &:hover {
             background-color: var(--red_100);
        }
-
-       &:active{
-        background-color: var(--purple_300);
-        box-shadow: 5px 5px #666;
-        transform: translateY(4px);
-       }
     `}
 
     
 
-    ${({variant}) => variant === "terciary" && css`
-       background-color: #FDBC42;
-       border: 2px solid #EA9B1D;
-       color: #424B5A;
-       box-shadow:  5px 5px 0 0 #EA9B1D;
+    ${({variant}) => variant === "analyses" && css`
+       background-color: var(--purple_100);
+       color: var(--text);
 
        &:hover {
-            background-color: #fff;
-            color: #474747;
+            background-color:  var(--purple_200);
        }
+    `}
 
-       &:active{
-        background-color: #FDBC42;
-        box-shadow: 5px 5px #666;
-        transform: translateY(4px);
+    ${({variant}) => variant === "design" && css`
+       background-color: var(--yellow_100);
+       color: var(--text);
+
+       &:hover {
+            background-color:  var(--yellow_200);
+       }
+    `}
+
+    ${({variant}) => variant === "evaluate" && css`
+       background-color: var(--blue_100);
+       color: var(--text);
+
+       &:hover {
+            background-color:  var(--blue_200);
        }
     `}
 `

@@ -13,5 +13,8 @@ export const ResetFiltersStyle = styled.div`
         margin-right: 10px;
     }
 
-    
+    &.opacity {
+        cursor: default;
+        opacity: 0.3;
+    }
 `

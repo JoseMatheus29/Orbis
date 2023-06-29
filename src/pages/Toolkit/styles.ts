@@ -33,7 +33,7 @@ export const ContainerSlider = styled.div`
 export const GridCards = styled.div`
     margin: 40px 0;
     display: grid;
-    grid-template-columns:  auto auto auto auto;
+    grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
 `
 export const Filters = styled.div`
@@ -54,14 +54,26 @@ export const ButtonGroup = styled.div`
     button:first-child {
         border-radius: 8px 0 0 8px;
         border-right: none;
+
+        &:hover {
+            background-color: var(--purple_200);
+        }
     }
 
     button:nth-child(2) {
         border-radius: 0;
+
+        &:hover {
+            background-color: var(--yellow_200);
+        }
     }
 
     button:nth-child(3) {
         border-radius: 0 8px 8px 0;
         border-left: none;
+
+        &:hover {
+            background-color: var(--blue_200);
+        }
     }
 `
