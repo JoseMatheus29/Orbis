@@ -21,9 +21,9 @@ const Form = () => {
                         <img src={Orbis_Form} alt="Imagem Orbis pensando"/>
                     </div>
                     <div className="texto_form">
-                        <h1 className="titulo_orbis">Me ajude a escolher!</h1>
-                        <h3 className="subtitulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                        <p className="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula vulputate lorem, in ornare risus finibus et. In sapien sapien, aliquet ac sagittis a, elementum sit amet urna. Mauris quis convallis enim. </p>
+                        <h1 className="titulo_orbis">Quer uma ajudinha?</h1>
+                        <h3 className="subtitulo">O Orbis pode te guiar na escolha do melhor método para você!</h3>
+                        <p className="descricao">Para receber uma recomendação de técnicas de Design Centrado no Usuário, basta responder algumas perguntas de acordo com seus objetivos e necessidades. </p>
                         <Button name="Iniciar" onClick={handleNavigateFormStage}/> 
                     </div>
                 </div>

@@ -1,17 +1,24 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
-    width: 75%;
+    width: 80%;
+    max-width: 1440px;
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
+
+
     .main_form{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
     .img_orbis_form{
         width: 60%;
@@ -26,19 +33,23 @@ export const Content = styled.div`
     }
 
     .titulo_orbis{
-        font-size: 2.5rem;
+        font-size: 2.75rem;
+        font-family: "Caprasimo", cursive;
+        font-weight: normal;
+        color: var(--red_200);
+        margin-bottom: 16px;
     }
 
     .subtitulo{
-        font-size: 1.3rem;
-        font-weight: normal;
-        padding-top: 25px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 16px;
     }
 
     .descricao{
         font-size: 1rem;
-        margin: 15px 0px 23px 0px;
         line-height: 160%;
+        margin-bottom: 28px;
     }
 
     button{
