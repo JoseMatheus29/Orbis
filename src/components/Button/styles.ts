@@ -39,9 +39,10 @@ export const ButtonStyle = styled.button<IButtonStyle>`
 
     
 
-    ${({variant}) => variant === "analyses" && css`
+    ${({variant}) => variant === "analyzes" && css`
        background-color: var(--purple_100);
        color: var(--text);
+       box-shadow:  5px 5px 0 0 var(--purple_200), 5px 5px 0 2px var(--text);
 
        &:hover {
             background-color:  var(--purple_200);
@@ -51,6 +52,8 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     ${({variant}) => variant === "design" && css`
        background-color: var(--yellow_100);
        color: var(--text);
+       box-shadow:  5px 5px 0 0 var(--yellow_200), 5px 5px 0 2px var(--text);
+
 
        &:hover {
             background-color:  var(--yellow_200);
@@ -60,6 +63,8 @@ export const ButtonStyle = styled.button<IButtonStyle>`
     ${({variant}) => variant === "evaluate" && css`
        background-color: var(--blue_100);
        color: var(--text);
+       box-shadow:  5px 5px 0 0 var(--blue_200), 5px 5px 0 2px var(--text);
+
 
        &:hover {
             background-color:  var(--blue_200);

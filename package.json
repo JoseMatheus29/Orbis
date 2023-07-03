@@ -13,7 +13,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.5",
+    "@mui/lab": "^5.0.0-alpha.134",
     "axios": "^1.4.0",
     "framer-motion": "^10.12.17",
     "json-server": "^0.17.3",
