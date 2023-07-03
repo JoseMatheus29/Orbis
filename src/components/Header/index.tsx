@@ -31,12 +31,16 @@ const Header = () => {
                             <InputTools/>
                             :
                             null} */}
-                        <li>
-                            <Link to="/toolkit">Acessar o Toolkit</Link>
-                        </li>
-                        <li>
-                            <Link to="/form">Recomendação</Link>
-                        </li>
+                        <Link to="/toolkit">
+                            <li>
+                                Acessar o Toolkit
+                            </li>
+                        </Link>
+                        <Link to="/form">
+                            <li>
+                            Recomendação
+                            </li>
+                        </Link>
                     </List>
                 </nav>
             </Content>

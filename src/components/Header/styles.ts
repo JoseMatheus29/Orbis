@@ -35,12 +35,17 @@ export const Content = styled.div`
 export const List = styled.ul`
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 30px;
+    height: 75px;
 
-
-    li a{
+    li{
         font-size: 1rem;
         font-weight: 600;
         color: var(--white);
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `

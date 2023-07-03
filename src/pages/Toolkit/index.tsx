@@ -67,10 +67,11 @@ const Toolkit = () => {
     // Filtrando por etapa
     if(selectedStages.length !== 0) {
       let filteredQs: ITool[] = [];
+      
       // Percorrendo todas as etapas selecionadas
       for(let i = 0; i <= selectedStages.length - 1; i++) {
         let qs_temp = filter(qs, "Stage_idStage", selectedStages[i]);
-        filteredQs = filteredQs.concat(qs_temp);
+        filteredQs = qs_temp.concat(filteredQs);
       }
       qs = filteredQs;
     }
@@ -139,16 +140,18 @@ const Toolkit = () => {
         <SliderFilter
           ariaLabel={"Esforço"}
           onChange={handleOnChangeSliderEffort}
+          setValue={setEffort}
           value={effort}
         />
         </ContainerSlider>
 
         <ContainerSlider>
-        <label htmlFor="time">Tempo</label>
+          <label htmlFor="time">Tempo</label>
 
         <SliderFilter
           ariaLabel={"Tempo"}
           onChange={handleOnChangeSliderTime}
+          setValue={setTime}
           value={time}
         />
         </ContainerSlider>

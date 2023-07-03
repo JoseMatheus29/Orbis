@@ -10,4 +10,8 @@ export const Icons = styled.div`
     display: flex;
     column-gap: 25px;
     margin-left: 25%;
+
+    img {
+        cursor: pointer;
+    }
 `

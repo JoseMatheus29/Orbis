@@ -35,8 +35,6 @@ export const Content = styled.div<IToolStyle>`
         `}
         ${({variant}) => variant === "design" && css`
             background: var(--yellow_200);
-
-
         `}
         ${({variant}) => variant === "evaluate" && css`
             background: var(--blue_200);
@@ -47,6 +45,7 @@ export const Content = styled.div<IToolStyle>`
 export const HeaderContent = styled.div `
     display: flex;
     flex-direction: line;
+
     #Button{
         margin-left:50%;
     }

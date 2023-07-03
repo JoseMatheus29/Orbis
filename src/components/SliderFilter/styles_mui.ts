@@ -7,6 +7,9 @@ export const PrettoSlider = styled(Slider)({
     '& .MuiSlider-track': {
       border: 'none',
     },
+    '& .MuiSlider-mark': {
+    
+    },
     '& .MuiSlider-thumb': {
       height: 24,
       padding: 2,

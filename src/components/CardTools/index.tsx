@@ -6,7 +6,6 @@ import { Container, Icons  } from './styles';
 interface ISValueCard {
     valueTime:  number ;
     valueEffort:  number;
-    value:  number;
     variant: string;
 }
 
