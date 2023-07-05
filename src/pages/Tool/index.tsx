@@ -7,7 +7,7 @@ import TimeLineOrbis from "../../components/TimeLine";
 import CardTools from "../../components/CardTools"
 import { stageName } from "./utils";
 import Button from "../../components/Button";
-
+import Tips from "../../components/CardTips";
 
 interface ITool {
     name_pt: string;
@@ -17,6 +17,7 @@ interface ITool {
     Stage_idStage: string;
     templateName: string;
     icon: string; 
+    tip:string;
 }
 
 interface ISteps {
@@ -30,7 +31,7 @@ interface ISteps {
 const Tool = () => {
     const params = useParams();
 
-    const [ tool, setTool ] = useState<ITool>({ name_pt: '', name_en: '', time:0, effort:0, Stage_idStage:'', templateName:'', icon:''});
+    const [ tool, setTool ] = useState<ITool>({ name_pt: '', name_en: '', time:0, effort:0, Stage_idStage:'', templateName:'', icon:'', tip:''});
     const [ steps, setSteps ] = useState<ISteps[]>([]);
     const stage = stageName(tool.Stage_idStage);
 
@@ -97,6 +98,10 @@ const Tool = () => {
                  </div>
             </ItensContent>
         </Content>
+        <Tips
+        text = {tool.tip}
+        template = {tool.templateName}
+        />
         </>
     )
 }

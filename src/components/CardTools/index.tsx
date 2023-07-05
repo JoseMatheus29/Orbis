@@ -21,7 +21,7 @@ const CardTool = ({valueTime,valueEffort, variant}: ISValueCard) => {
             <Icons>
                 <h4>{"Tempo"}</h4>
                 {/*@ts-ignore*/}
-                <img src={Time} style={  valueTime > 0 ? { opacity: 1} : {opacity: 0.5} } />
+                <img src={Time} style={  valueTime > 0 ? { opacity: 1} : {opacity: 0.5}} />
                 {/*@ts-ignore*/}
                 <img src={Time} style={  valueTime > 1 ? { opacity: 1} : {opacity: 0.5}}  />
                 {/*@ts-ignore*/}

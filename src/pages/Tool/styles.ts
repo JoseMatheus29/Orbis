@@ -22,7 +22,7 @@ export const Content = styled.div<IToolStyle>`
         margin-left:16%;
         height: 30px;
         padding: 6px 20px;
-        border-radius: 0 0 12px 12px;
+        border-radius: 20px;
         font-size: 1rem;
         font-family: 'Raleway';
         font-style: 700;

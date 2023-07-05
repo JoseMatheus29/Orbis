@@ -33,35 +33,33 @@ const TimeLineOrbis = ({title, description, number, variant}: IsTool )  => {
     >
       
       <TimelineItem >
-        <TimelineSeparator
-        >
+        <TimelineSeparator>
           <TimelineDot 
-          sx={{
-            background:backgroundColor,
-            borderColor :cor,
-            color: cor,
-            width:30,
-            margin:0,
-            justifyContent:"center",
-            alignItems: "flex-start",
-            
-          }}>
-            {number}
-          </TimelineDot>
-          <TimelineConnector
-          sx={{
-            background:cor,
-            height:50,
-          }}
-          />
-          </TimelineSeparator>
-        <TimelineContent sx={{
-          padding:0,
-          marginLeft:2,
-          }}>
-        <Typography font-family= "Raleway, sans-serif"  variant="h6" component="span">{title}</Typography>
-        <Typography font-family= "Raleway, sans-serif">{description} </Typography>
-          </TimelineContent>
+            sx={{
+              background:backgroundColor,
+              borderColor :cor,
+              color: cor,
+              width:30,
+              margin:0,
+              justifyContent:"center",
+              alignItems: "flex-start",
+               }}>
+              {number}
+            </TimelineDot>
+            <TimelineConnector
+            sx={{
+              background:cor,
+              height:50,
+            }}
+            />
+            </TimelineSeparator>
+          <TimelineContent sx={{
+            padding:0,
+            marginLeft:2,
+            }}>
+          <Typography font-family= "Raleway, sans-serif"  variant="h6" component="span">{title}</Typography>
+          <Typography font-family= "Raleway, sans-serif">{description} </Typography>
+        </TimelineContent>
       </TimelineItem>
     </Timeline>
     </>
