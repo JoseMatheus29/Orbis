@@ -1,7 +1,6 @@
 import Time from '../../assets/icon/time.svg'
 import Halter from '../../assets/icon/halter.svg'
 import { Container, Icons  } from './styles';
-import { useState } from 'react';
 
 interface ISValueCard {
     valueTime:  number ;
