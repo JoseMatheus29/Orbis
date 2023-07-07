@@ -12,9 +12,11 @@ interface ISValueCard {
 const CardTool = ({valueTime,valueEffort, variant}: ISValueCard) => {
 
     const [ cor, setCor ] = useState('');
-    if(variant == 'analyzes'){setCor("var(--purple_200)"}
-    if(variant == 'design'){setCor("var(--yellow_200)")}
-    if(variant == 'evaluate'){setCor(cor = "var(--blue_200)")}
+    
+    if(variant == 'analyzes') {setCor("var(--purple_200)")}
+    if(variant == 'design') {setCor("var(--yellow_200)")}
+    if(variant == 'evaluate') {setCor(cor = "var(--blue_200)")}
+    
     return(
         
         <Container
