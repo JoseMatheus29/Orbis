@@ -1,6 +1,5 @@
 import { FormControlLabel, Radio } from "@mui/material";
 import { motion } from "framer-motion";
-import { useForm } from "../../hooks/useForm";
 import { useState } from "react";
 
 interface IOptionLabel {
@@ -13,8 +12,6 @@ interface IOptionLabel {
 }
 
 const OptionLabel = ({ img, labelName, onClick, value, id, checked }: IOptionLabel) => {
-
-  const [ selectedValue, setSelectedValue ] = useState('');
 
   return (
     <>
