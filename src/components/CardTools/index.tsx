@@ -15,7 +15,7 @@ const CardTool = ({valueTime,valueEffort, variant}: ISValueCard) => {
     
     if(variant == 'analyzes') {setCor("var(--purple_200)")}
     if(variant == 'design') {setCor("var(--yellow_200)")}
-    if(variant == 'evaluate') {setCor(cor = "var(--blue_200)")}
+    if(variant == 'evaluate') {setCor("var(--blue_200)")}
     
     return(
         
