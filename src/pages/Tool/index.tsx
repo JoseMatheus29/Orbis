@@ -79,7 +79,7 @@ const Tool = () => {
                 />   
                 </div>
                  <div>
-                    <h3 id="WhyUseTitle">Quando usar</h3>""
+                    <h3 id="WhyUseTitle">QUANDO USAR</h3>
                     <p id="WhyUseText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat quam non leo viverra, vel varius velit faucibus. Aenean congue magna a eros commodo, in pellentesque felis vestibulum. Fusce ullamcorper massa sed risus lobortis, at volutpat dolor lobortis. Praesent quis efficitur ipsum. Sed non sapien sed enim eleifend tincidunt sed at mauris. Nullam eu est lectus. Vestibulum et blandit orci. Nullam vitae nisi id nunc pellentesque fermentum eget a odio.</p>
                     <h3 id="WhyUseTitle">Passo a passo</h3>
                     <Steps>

@@ -17,6 +17,7 @@ import Graphics from "../../assets/graphics.svg";
 import CardStage from "../../components/CardStage";
 import CardDev from "../../components/CardDev";
 import { Footer } from "../../components/Footer";
+import { motion } from "framer-motion";
 
 
 const Home = () => {
@@ -32,7 +33,12 @@ const Home = () => {
     }
 
     return(
-        <>
+        <motion.div
+        initial={{ opacity: 0.8 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        >
         <Header/>
         <Content>
         <Main>
@@ -148,7 +154,7 @@ const Home = () => {
             </Content>
         </Section>
         <Footer/>
-        </>
+        </motion.div>
     )
 }
 

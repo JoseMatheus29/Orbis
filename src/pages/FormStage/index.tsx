@@ -1,25 +1,50 @@
-import Header from "../../components/Header";
-import { Content, Container } from "./style";
-
 import AnalysesOrbis from "../../assets/analyses_orbis.svg"
 import DesignOrbis from "../../assets/design_orbis.svg";
 import EvaluateOrbis from "../../assets/evaluate_orbis.svg";
-import SectionForm from "../../assets/section-form.svg";
+import Arrow from '../../assets/form_assests/arrow-back.svg';
+import Button from "../../components/Button";
+import FormTheme from "../../components/FormTheme";
+
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   FormControl,
-  FormControlLabel,
-  Radio,
   RadioGroup,
 } from "@mui/material";
+import { useForm, FormAction } from "../../hooks/useForm";
+import { useEffect } from "react";
+import OptionLabel from "../../components/OptionLabel";
+
 
 const FormStage = () => {
+
+  const navigate = useNavigate();
+  const { state, dispatch } = useForm();
+
+  useEffect(() => {
+    dispatch({
+      type: FormAction.setCurrentStep,
+      payload: 1
+    })
+  }, [])
+
+
+  const handleNextStep = () => {
+    if(state.Stage_idStage !== '') {
+      navigate('/time');
+    }
+  }
+
+  const handleSetStage = (e: any) => {
+    dispatch({
+      type: FormAction.setStage,
+      payload: e.target.value
+    })
+  }
+
   return (
     <>
-      <Header />
-      <Container>
-        <img src={SectionForm} id="section-form" />
-        <Content>
+      <FormTheme>
           <h1>
             Selecione a <span>etapa</span> que você irá realizar:
           </h1>
@@ -27,50 +52,46 @@ const FormStage = () => {
           <FormControl>
             <RadioGroup
               row
+              className="radio-group"
               aria-labelledby="demo-form-control-label-placement"
               name="position"
               defaultValue="top"
             >
-               <FormControlLabel
+              <OptionLabel
+                checked={ state.Stage_idStage == "3" }
                 value="3"
-                control={<Radio />}
-                className="label-form"
-                label={
-                <>
-                  <img src={AnalysesOrbis} alt="" id="analyses-orbis" />
-                  <h2>Analisar</h2>
-                </>
-                }
-                labelPlacement="top"
+                labelName="Analisar"
+                onClick={handleSetStage}
+                img={AnalysesOrbis}
+                id="analyses-orbis"
               />
-              <FormControlLabel
-                value="3"
-                control={<Radio />}
-                className="label-form"
-                label={
-                <>
-                  <img src={DesignOrbis} alt="" id="analyses-orbis" />
-                  <h2>Analisar</h2>
-                </>
-                }
-                labelPlacement="top"
+              <OptionLabel
+                checked={ state.Stage_idStage == "4" }
+                value="4"
+                labelName="Projetar"
+                onClick={handleSetStage}
+                img={DesignOrbis}
+                id="analyses-orbis"
               />
-              <FormControlLabel
-                value="3"
-                control={<Radio />}
-                className="label-form"
-                label={
-                <>
-                  <img src={EvaluateOrbis} alt="" id="analyses-orbis" />
-                  <h2>Analisar</h2>
-                </>
-                }
-                labelPlacement="top"
+              <OptionLabel
+                checked={ state.Stage_idStage == "5" }
+                value="5"
+                labelName="Avaliar"
+                onClick={handleSetStage}
+                img={EvaluateOrbis}
+                id="analyses-orbis"
               />
             </RadioGroup>
           </FormControl>
-        </Content>
-      </Container>
+          <div id="nav-form">
+            <Link to='/form'><img src={Arrow}/> Voltar</Link>
+            <Button
+            name="Próximo"
+            onClick={handleNextStep}
+          />
+          </div>
+
+        </FormTheme>
     </>
   );
 };

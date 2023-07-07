@@ -2,6 +2,7 @@ import Button from "../../components/Button";
 import Header from "../../components/Header"
 import { Content } from "./style";
 import Orbis_Form from "../../assets/orbis-form.svg"
+
 import { useNavigate } from "react-router-dom";
 
 
@@ -9,7 +10,7 @@ const Form = () => {
 
     const navigate = useNavigate ();
     const handleNavigateFormStage = () => {
-        navigate('/formstage');
+        navigate('/stage');
     }
 
     return (

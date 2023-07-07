@@ -9,7 +9,7 @@ interface ITool{
     currentStep: 0;
     effort: string;
     time: string;
-    Stage_idStage: '3' | '4' | '5';
+    Stage_idStage: '' | '3' | '4' | '5';
 }
 
 type Action = {
@@ -28,7 +28,7 @@ type FormProviderProps = {
 
 const initialData: ITool = {
     currentStep: 0,
-    Stage_idStage: "3",
+    Stage_idStage: "",
     time: "",
     effort: ""
 }
