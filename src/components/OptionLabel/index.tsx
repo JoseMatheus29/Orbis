@@ -1,6 +1,5 @@
 import { FormControlLabel, Radio } from "@mui/material";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 interface IOptionLabel {
   img: string;
