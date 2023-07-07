@@ -1,7 +1,7 @@
 import Time from '../../assets/icon/time.svg'
 import Halter from '../../assets/icon/halter.svg'
 import { Container, Icons  } from './styles';
-
+import { useState } from 'react';
 
 interface ISValueCard {
     valueTime:  number ;
@@ -10,9 +10,11 @@ interface ISValueCard {
 }
 
 const CardTool = ({valueTime,valueEffort, variant}: ISValueCard) => {
-    if(variant == 'analyzes'){cor = "var(--purple_200)"}
-    if(variant == 'design'){cor = "var(--yellow_200)"}
-    if(variant == 'evaluate'){cor = "var(--blue_200)"}
+
+    const [ cor, setCor ] = useState('');
+    if(variant == 'analyzes'){setCor("var(--purple_200)"}
+    if(variant == 'design'){setCor("var(--yellow_200)")}
+    if(variant == 'evaluate'){setCor(cor = "var(--blue_200)")}
     return(
         
         <Container
