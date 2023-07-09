@@ -12,6 +12,13 @@ export const Container = styled.div<IContainerStyle>`
 
     padding: 60px;
     border-radius: 20px;
+
+    h3 {
+        font-size: 1.15rem;
+        line-height: 160%;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
     
     ${({template}) => template === "analyses" && css`
         background-color: var(--purple_100);
