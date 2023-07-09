@@ -1,15 +1,25 @@
 import { FormControl, RadioGroup } from "@mui/material";
 import FormTheme from "../../components/FormTheme";
 import OptionLabel from "../../components/OptionLabel";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import { FormAction, useForm } from "../../hooks/useForm";
 
 import Effort1 from "../../assets/form_assests/effort1.svg";
 import Arrow from "../../assets/form_assests/arrow-back.svg";
+import { TimeLineForm } from "../../components/TimeLineForm";
+import { useEffect } from "react";
+
 
 const FormEffort = () => {
   const { state, dispatch } = useForm();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if(!state.Stage_idStage) {
+      navigate('/stage');
+    }
+  }, [])
 
   const handleSetEffort = (e: any) => {
     dispatch({
@@ -18,8 +28,17 @@ const FormEffort = () => {
     })
   };
 
+  const handleNextStep = () => {
+    if(state.time !== '') {
+      navigate('/participants');
+    }
+  }
+
   return (
     <FormTheme>
+      <TimeLineForm
+          currentStep={3}
+        />
       <h1>
         Quanto <span>tempo</span> você pretende <br /> destinar a este trabalho?
       </h1>
@@ -61,7 +80,11 @@ const FormEffort = () => {
         <Link to="/time">
           <img src={Arrow} /> Voltar
         </Link>
-        <Button name="Próximo" onClick={undefined} />
+        <Button
+          name="Próximo"
+          onClick={handleNextStep}
+          variant={ state.effort ? "primary" : "disabled"}
+          />
       </div>
     </FormTheme>
   );

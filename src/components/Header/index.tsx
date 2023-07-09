@@ -1,19 +1,20 @@
 import { Container, Content, List } from "./styles"
 import Logo from "../../assets/logo-orbis.svg"
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import InputTools from '../InputTools';
 
 const Header = () => {
 
-    // const location = useLocation();
+    const location = useLocation();
 
-    // const [ isHome, setIsHome ] = useState(false);
+    const [ isHome, setIsHome ] = useState(false);
 
-    // useEffect(() => {
-    //     if(location.pathname === '/') {
-    //         setIsHome(true);
-    //     }
-    // }, [ location.pathname ])
+    useEffect(() => {
+        if(location.pathname === '/') {
+            setIsHome(true);
+        }
+    }, [ location.pathname ])
 
     return(
         <Container>
@@ -27,17 +28,17 @@ const Header = () => {
                 <nav>
                   
                     <List>
-                        {/* {isHome ? 
+                        {isHome ? 
                             <InputTools/>
                             :
-                            null} */}
+                            null}
                         <Link to="/toolkit">
-                            <li>
+                            <li className="hover-underline-animation">
                                 Acessar o Toolkit
                             </li>
                         </Link>
                         <Link to="/form">
-                            <li>
+                            <li className="hover-underline-animation">
                             Recomendação
                             </li>
                         </Link>

@@ -13,8 +13,10 @@ export const Container = styled.div`
   }
 
   .radio-group {
-    column-gap: 50px;
+    column-gap: 25px;
     margin-bottom: 30px;
+    display: flex;
+    align-items: flex-end;
   }
 
   .MuiFormControlLabel-root	{
@@ -68,9 +70,19 @@ export const Container = styled.div`
     background: var(--white);
   }
 
+  #dot-active {
+    color: var(--white);
+    background-color: var(--red_200);
+    
+  }
+
   .MuiTimelineConnector-root {
     height: 50px;
     background: var(--red_200);
+  }
+
+  #last-connector {
+    background: transparent;
   }
 
   .MuiTimelineContent-root {
@@ -133,9 +145,23 @@ export const Content = styled.div`
       width: 100%;
     }
 
+    .MuiTimelineItem-root {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    
+    }
+    .css-ha3bif-MuiTimelineItem-root:before {
+      padding: 0;
+    }
+
     .timeline-form {
       position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       left: 0;
     }
+
 `
 

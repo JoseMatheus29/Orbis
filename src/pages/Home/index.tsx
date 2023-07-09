@@ -91,17 +91,20 @@ const Home = () => {
                     <CardStage
                         name="Analisar"
                         template="analyses"
-                        description="Identificar quem são os principais usuários de um produto e a natureza do problema. Nesta etapa o designer deve se aproximar dos usuários e observar suas atividades, na tentativa de entender interesses, motivações e necessidades. A compreensão adequada do problema é proveniente do conhecimento aprofundado sobre aquilo que as pessoas desejam realizar e os impedimentos existentes na experiência atual. "
+                        subtitle="Identificar quem são os principais usuários de um produto e a natureza do problema."
+                        description="Nesta etapa o designer deve se aproximar dos usuários e observar suas atividades, na tentativa de entender interesses, motivações e necessidades. A compreensão adequada do problema é proveniente do conhecimento aprofundado sobre aquilo que as pessoas desejam realizar e os impedimentos existentes na experiência atual. "
                     />
                     <CardStage
                         name="Projetar"
                         template="design"
-                        description="Nessa etapa são desenvolvidas propostas de soluções que contemplem os requisitos estabelecidos para o sistema. A criação da proposta utiliza o estudo dos usuários como embasamento durante seu desenvolvimento. É o momento de exercício da criatividade, e os principais fundamentos da etapa são a geração de muitas ideias, o respeito às ideias que surgem, evitando criticismo no início do processo, e o questionamento constante sobre a adequação das soluções."
+                        subtitle="Nessa etapa são desenvolvidas propostas de soluções que contemplem os requisitos estabelecidos para o sistema."
+                        description="A criação da proposta utiliza o estudo dos usuários como embasamento durante seu desenvolvimento. É o momento de exercício da criatividade, e os principais fundamentos da etapa são a geração de muitas ideias, o respeito às ideias que surgem, evitando criticismo no início do processo, e o questionamento constante sobre a adequação das soluções."
                     />
                     <CardStage
                         name="Avaliar"
                         template="evaluate"
-                        description="Verificar se a solução proposta está alinhada com os requisitos estabelecidos anteriormente e se satisfaz às necessidades dos usuários em seus diferentes contextos de uso. É durante as avaliações que a aceitação do design e a qualidade de uso são verificados. Podem ser feitas avaliações por especialistas ou com usuários. No último caso, é necessário identificar pessoas que fazem parte do público-alvo da solução e reuni-las para testar uma ideia. A avaliação é seguida por ciclos de iteração, em que acontecem o refinamento das ideias e a melhoria contínua da solução."
+                        subtitle="Verificar se a solução proposta está alinhada com os requisitos estabelecidos anteriormente e se satisfaz às necessidades dos usuários em seus diferentes contextos de uso."
+                        description="É durante as avaliações que a aceitação do design e a qualidade de uso são verificados. Podem ser feitas avaliações por especialistas ou com usuários. No último caso, é necessário identificar pessoas que fazem parte do público-alvo da solução e reuni-las para testar uma ideia. A avaliação é seguida por ciclos de iteração, em que acontecem o refinamento das ideias e a melhoria contínua da solução."
                     />
                 </Stages>
             </Content>

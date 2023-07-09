@@ -14,6 +14,7 @@ import {
 import { useForm, FormAction } from "../../hooks/useForm";
 import { useEffect } from "react";
 import OptionLabel from "../../components/OptionLabel";
+import { TimeLineForm } from "../../components/TimeLineForm";
 
 
 const FormStage = () => {
@@ -45,6 +46,10 @@ const FormStage = () => {
   return (
     <>
       <FormTheme>
+            {state.Stage_idStage ? <TimeLineForm
+              currentStep={1}
+            /> :
+            null }
           <h1>
             Selecione a <span>etapa</span> que você irá realizar:
           </h1>
@@ -86,6 +91,7 @@ const FormStage = () => {
           <div id="nav-form">
             <Link to='/form'><img src={Arrow}/> Voltar</Link>
             <Button
+            variant={ state.Stage_idStage ? "primary" : "disabled"}
             name="Próximo"
             onClick={handleNextStep}
           />

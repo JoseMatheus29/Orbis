@@ -69,5 +69,16 @@ export const ButtonStyle = styled.button<IButtonStyle>`
        &:hover {
             background-color:  var(--blue_200);
        }
+
+       
+    `}
+
+    ${({variant}) => variant === "disabled" && css`
+     background-color: var(--background);
+       border: 2px solid var(--red_200);
+       color: var(--text);
+       box-shadow:  5px 5px 0 0 var(--red_200);
+       opacity: 0.75;
+       cursor: default;
     `}
 `

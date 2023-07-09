@@ -25,7 +25,7 @@ const firstCard: Variants = {
   
 
 
-const CardStage = ({ name, description, template } : ICardStage) => {
+const CardStage = ({ name, description, template, subtitle } : ICardStage) => {
     return (
         <motion.div
             className="card-container"
@@ -46,6 +46,7 @@ const CardStage = ({ name, description, template } : ICardStage) => {
             }
             <Column>
             <h1>{name}</h1>
+            <h3>{subtitle}</h3>
             <p>{description}</p>
             </Column>
             

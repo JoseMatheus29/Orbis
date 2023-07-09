@@ -8,6 +8,9 @@ import FormStage from "./pages/FormStage";
 import FormTime from "./pages/FormTime";
 import Tool from "./pages/Tool";
 import FormEffort from "./pages/FormEffort";
+import FormParticipants from "./pages/FormParticipants";
+import FormTypeOfData from "./pages/FormTypeOfData";
+import Recommendation from "./pages/Recommendation";
 
 const RouteElement = () => {
   return (
@@ -21,6 +24,10 @@ const RouteElement = () => {
         <Route element={<FormStage />} path="/stage" />
         <Route element={<FormTime />} path="/time" />
         <Route element={<FormEffort/>} path="/effort" />
+        <Route element={<FormParticipants/>} path="/participants"/>
+        <Route element={<FormTypeOfData/>} path="/type_of_data"/>
+
+        <Route element={<Recommendation/>} path="/recommendation"/>
       </Routes>
     </BrowserRouter>
   );

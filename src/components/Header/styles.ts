@@ -47,5 +47,26 @@ export const List = styled.ul`
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
+
+    .hover-underline-animation::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        margin-bottom: 24px;
+        left: 0;
+        background-color: var(--white);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
 `

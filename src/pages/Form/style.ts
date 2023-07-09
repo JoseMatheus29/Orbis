@@ -37,7 +37,7 @@ export const Content = styled.div`
         font-family: "Caprasimo", cursive;
         font-weight: normal;
         color: var(--red_200);
-        margin-bottom: 16px;
+        margin-bottom: 4px;
     }
 
     .subtitulo{

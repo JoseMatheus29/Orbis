@@ -64,10 +64,16 @@ export const GlobalStyle = createGlobalStyle`
         height: 40px;
         background-color: var(--white);
         width: 240px;
-        border-radius: 4px;
+        border: 2px solid #FFDAD3;
+        border: none;
         outline: none;
-        border: 1px solid #C2D1D9;
-        color: #C2D1D9;
-        font-family: 'Raleway', sans-serif;
+    }
+
+
+    #section-recommendation {
+        top: 0;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
     }
 `
