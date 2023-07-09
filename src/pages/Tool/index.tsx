@@ -5,7 +5,6 @@ import { api } from "../../services/api";
 import { Content, Steps, ItensContent, HeaderContent } from "./styles";
 import TimeLineOrbis from "../../components/TimeLine";
 import CardTools from "../../components/CardTools"
-import { stageName } from "./utils";
 import Button from "../../components/Button";
 import Tips from "../../components/CardTips";
 
@@ -33,7 +32,6 @@ const Tool = () => {
 
     const [ tool, setTool ] = useState<ITool>({ name_pt: '', name_en: '', time:0, effort:0, Stage_idStage:'', templateName:'', icon:'', tip:''});
     const [ steps, setSteps ] = useState<ISteps[]>([]);
-    const stage = stageName(tool.Stage_idStage);
 
     useEffect(() => {
         api.get(`/Tools/list/${params.idTool}`)
@@ -53,7 +51,6 @@ const Tool = () => {
         <Content
             variant={tool.templateName}
         >
-            <h3 id="StageOfTool">{stage}</h3>
             <HeaderContent>
                 <img src={ `https://alairtonjunior.com/imgs_icon/` + tool.icon } alt="Ícone" />
                 <div>
@@ -64,7 +61,7 @@ const Tool = () => {
                 <Button
                     name= "Materiais extras"
                     onClick = {undefined} 
-                    variant={tool.templateName}
+                    variant={"secondary"}
                     />
                 </div>
             </HeaderContent>
@@ -76,7 +73,8 @@ const Tool = () => {
                     valueTime= {tool.time}
                     valueEffort= {tool.effort}
                     variant={tool.templateName}
-                />   
+                    stage_id = {tool.Stage_idStage}
+                    />   
                 </div>
                  <div>
                     <h3 id="WhyUseTitle">QUANDO USAR</h3>

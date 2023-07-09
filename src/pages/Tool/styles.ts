@@ -18,8 +18,8 @@ export const Content = styled.div<IToolStyle>`
         `}   
     }
     #StageOfTool {
-        width: 8%;
-        margin-left:16%;
+        width: 10%;
+        margin-left: 16%;
         height: 30px;
         padding: 6px 20px;
         border-radius: 20px;

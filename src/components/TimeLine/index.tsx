@@ -17,10 +17,9 @@ interface IsTool {
 
 const TimeLineOrbis = ({title, description, number, variant}: IsTool )  => {
   var cor;
-  var backgroundColor;
-  if(variant == '3'){cor = "var(--purple_200)"; backgroundColor = "var(--purple_100)" }
-  if(variant == '4'){cor = "var(--yellow_200)"; backgroundColor = "var(--yellow_100)"}
-  if(variant == '5'){cor = "var(--blue_200)"; backgroundColor = "var(--blue_100)"}
+  if(variant == '3'){cor = "var(--purple_200)";}
+  if(variant == '4'){cor = "var(--yellow_200)"; }
+  if(variant == '5'){cor = "var(--blue_200)";}
   return (
     <>
     <Timeline
@@ -36,7 +35,7 @@ const TimeLineOrbis = ({title, description, number, variant}: IsTool )  => {
         <TimelineSeparator>
           <TimelineDot 
             sx={{
-              background:backgroundColor,
+              background:"var(--white)",
               borderColor :cor,
               color: cor,
               width:30,
