@@ -15,7 +15,7 @@ import Skeleton from "@mui/material/Skeleton";
 import { motion } from 'framer-motion'
 
 const Toolkit = () => {
-
+  document.title = 'Toolkit - Orbis';
   const [allTools, setAllTools] = useState<ITool[]>([]);
   const [result, setResult] = useState<ITool[]>([]);
 

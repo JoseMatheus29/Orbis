@@ -14,7 +14,7 @@ const Form = () => {
     const handleNavigateFormStage = () => {
         navigate('/stage');
     }
-
+    document.title = 'Formulário';
     return (
         <>
             <Header/>

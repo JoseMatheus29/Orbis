@@ -16,8 +16,8 @@ const RouteElement = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<Toolkit />} path="/toolkit" />
+        <Route element={<Home />} path="/"/>
+        <Route element={<Toolkit />} path="/toolkit"/>
         <Route element={<Tool />} path="/toolkit/:idTool" />
 
         <Route element={<Form />} path="/form" />

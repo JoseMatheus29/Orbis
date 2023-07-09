@@ -28,7 +28,7 @@ import Bia from '../../assets/team/bia.svg';
 
 
 const Home = () => {
-
+    document.title = 'Orbis'
     // Navegação da páginas
     const navigate = useNavigate ();
 

@@ -9,7 +9,7 @@ interface IFormTheme {
 }
 
 const FormTheme = ({ children }: IFormTheme) => {
-
+    document.title = 'Formulário - Orbis';
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [page, setPage] = useState('');
     function handleOpenModal(page: string) {

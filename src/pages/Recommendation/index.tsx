@@ -16,6 +16,7 @@ const Recommendation = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useForm();
   const [renderRecommendation, setRenderRecommendation] = useState(false);
+  document.title = 'Recomendação - Orbis'
 
   useEffect(() => {
     // @ts-ignore

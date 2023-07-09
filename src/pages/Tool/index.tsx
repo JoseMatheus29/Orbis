@@ -56,6 +56,7 @@ const Tool = () => {
   }, []);
 
   //console.log(steps);
+  document.title = `${tool.name_pt} - Orbis`;
 
   return (
     <>
