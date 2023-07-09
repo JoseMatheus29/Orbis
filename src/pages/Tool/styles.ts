@@ -17,29 +17,7 @@ export const Content = styled.div<IToolStyle>`
             color:var(--blue_200);
         `}   
     }
-    #StageOfTool {
-        width: 10%;
-        margin-left: 16%;
-        height: 30px;
-        padding: 6px 20px;
-        border-radius: 20px;
-        font-size: 1rem;
-        font-family: 'Raleway';
-        font-style: 700;
-        color: #fff;
-        font-weight: 700;
-        top: 0px;
-        ${({variant}) => variant === "analyzes" && css`
-            background: var(--purple_200);
-
-        `}
-        ${({variant}) => variant === "design" && css`
-            background: var(--yellow_200);
-        `}
-        ${({variant}) => variant === "evaluate" && css`
-            background: var(--blue_200);
-        `}
-    }
+   
 `
     
 export const HeaderContent = styled.div `
@@ -71,6 +49,9 @@ export const ItensContent = styled.div<IToolStyle>`
             margin-top: 10px;
             font-family: 'Raleway', sans-serif;
             color:var(--text)
+        }
+        #ImgTool{
+         margin-left:25%;   
         }
         
     }
