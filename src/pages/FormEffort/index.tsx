@@ -43,7 +43,7 @@ const FormEffort = () => {
           currentStep={3}
         />
       <h1>
-        Quanto <span>tempo</span> você pretende <br /> destinar a este trabalho?
+      Quanto de <span>esforço</span> será aplicado <br/> no projeto?
       </h1>
       <FormControl>
         <RadioGroup

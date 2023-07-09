@@ -19,6 +19,13 @@ import CardDev from "../../components/CardDev";
 import { Footer } from "../../components/Footer";
 import { motion } from "framer-motion";
 
+import Jamyle from '../../assets/team/jamyle.svg';
+import Alairton from '../../assets/team/alairton.svg';
+import Isabelle from '../../assets/team/isabelle.svg';
+import Mariana from '../../assets/team/mariana.svg';
+import Matheus from '../../assets/team/matheus.svg';
+import Bia from '../../assets/team/bia.svg';
+
 
 const Home = () => {
 
@@ -144,12 +151,37 @@ const Home = () => {
                         Desenvolvedores
                     </h1>
                     <GridDevs>
-                        <CardDev/>
-                        <CardDev/>
-                        <CardDev/>
-                        <CardDev/>    
-                        <CardDev/>
-                        <CardDev/>
+                        <CardDev
+                            name="Alairton Junior"
+                            description="Project Leader"
+                            img={Alairton}
+                        />
+                        <CardDev
+                            name="Jamyle Layla"
+                            description="Front-end Developer"
+                            img={Jamyle}
+                        />
+                        <CardDev
+                            name="Isabelle Reinbold"
+                            description="Front-end Developer"
+                            img={Isabelle}
+                        />
+                        <CardDev
+                            name="Mariana Rangel"
+                            description="Designer | Ilustradora"
+                            img={Mariana}
+                        />
+                        <CardDev
+                            name="Beatriz Carvalho"
+                            description="Designer | Ilustradora"
+                            img={Bia}
+                        />
+                        <CardDev
+                            name="Matheus Alvino"
+                            description="FullStack Developer"
+                            img={Matheus}
+                        />
+                        
                     </GridDevs>     
 
                 </DevsContainer>

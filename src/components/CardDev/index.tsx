@@ -1,13 +1,18 @@
 import { Container } from "./styles";
-import Jamyle from '../../assets/team/jamyle.svg';
 
-const CardDev = () => {
+interface ICardDev {
+    img: string;
+    name: string;
+    description: string;
+}
+
+const CardDev = ({img, name, description}: ICardDev) => {
 
     return (
         <Container>
-            <img src={ Jamyle } alt="" />
-            <h2>Jamyle Layla</h2>
-            <p>Front-end Developer</p>
+            <img src={ img } />
+            <h2>{name}</h2>
+            <p>{description}</p>
         </Container>
     )
 }
