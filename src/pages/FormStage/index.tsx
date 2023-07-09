@@ -12,7 +12,6 @@ import {
   RadioGroup,
 } from "@mui/material";
 import { useForm, FormAction } from "../../hooks/useForm";
-import { useEffect } from "react";
 import OptionLabel from "../../components/OptionLabel";
 import { TimeLineForm } from "../../components/TimeLineForm";
 
@@ -22,14 +21,6 @@ const FormStage = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useForm();
 
-  useEffect(() => {
-    dispatch({
-      type: FormAction.setCurrentStep,
-      payload: 1
-    })
-  }, [])
-
-
   const handleNextStep = () => {
     if(state.Stage_idStage !== '') {
       navigate('/time');
@@ -37,6 +28,10 @@ const FormStage = () => {
   }
 
   const handleSetStage = (e: any) => {
+    dispatch({
+      type: FormAction.setCurrentStep,
+      payload: 1
+    })
     dispatch({
       type: FormAction.setStage,
       payload: e.target.value

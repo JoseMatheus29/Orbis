@@ -41,6 +41,17 @@ const FormParticipants = () => {
     }
   }
 
+  const handleFinish = () => {
+    if(state.participants !== '') {
+      navigate('/recommendation');
+    }
+    // dispatch({ type: FormAction.resetState, payload: null });
+    dispatch({
+        type: FormAction.setCurrentStep,
+        payload: 0
+    })
+    }
+
   return (
     <FormTheme>
         <TimeLineForm
@@ -89,11 +100,19 @@ const FormParticipants = () => {
       </FormControl>
       <div id="nav-form">
         <Link to='/effort'><img src={Arrow}/> Voltar</Link>
-        <Button
+        { state.Stage_idStage == '4' ? 
+          <Button
+          name="Finalizar"
+          onClick={handleFinish}
+          variant={ state.participants ? "primary" : "disabled"}
+          />
+          :
+          <Button
           name="Próximo"
           onClick={handleNextStep}
-          variant={ state.effort ? "primary" : "disabled"}
+          variant={ state.participants ? "primary" : "disabled"}
           />
+          }
       </div>
     </FormTheme>
   );

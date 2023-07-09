@@ -10,7 +10,7 @@ import { ICardStage } from "./types";
 const firstCard: Variants = {
     offscreen: {
       y: 20,
-      opacity: 0,
+      opacity: 1,
     },
     onscreen: {
       y: 0,

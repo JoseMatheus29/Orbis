@@ -6,6 +6,8 @@ import Button from "../../components/Button";
 import { FormAction, useForm } from "../../hooks/useForm";
 
 import Effort1 from "../../assets/form_assests/effort1.svg";
+import Effort2 from "../../assets/form_assests/effort2.svg";
+import Effort3 from "../../assets/form_assests/effort3.svg";
 import Arrow from "../../assets/form_assests/arrow-back.svg";
 import { TimeLineForm } from "../../components/TimeLineForm";
 import { useEffect } from "react";
@@ -33,6 +35,7 @@ const FormEffort = () => {
       navigate('/participants');
     }
   }
+
 
   return (
     <FormTheme>
@@ -63,7 +66,7 @@ const FormEffort = () => {
             value="2"
             labelName="Médio"
             onClick={handleSetEffort}
-            img={Effort1}
+            img={Effort2}
             id="analyses-orbis"
           />
           <OptionLabel
@@ -71,7 +74,7 @@ const FormEffort = () => {
             value="3"
             labelName="Alto"
             onClick={handleSetEffort}
-            img={Effort1}
+            img={Effort3}
             id="analyses-orbis"
           />
         </RadioGroup>
@@ -81,10 +84,11 @@ const FormEffort = () => {
           <img src={Arrow} /> Voltar
         </Link>
         <Button
-          name="Próximo"
-          onClick={handleNextStep}
-          variant={ state.effort ? "primary" : "disabled"}
-          />
+        name="Próximo"
+        onClick={handleNextStep}
+        variant={ state.effort ? "primary" : "disabled"}
+        />
+        
       </div>
     </FormTheme>
   );

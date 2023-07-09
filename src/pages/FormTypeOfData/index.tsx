@@ -43,7 +43,7 @@ const FormTypeOfData = () => {
     // dispatch({ type: FormAction.resetState, payload: null });
     dispatch({
         type: FormAction.setCurrentStep,
-        payload: 1
+        payload: 0
     })
   }
 

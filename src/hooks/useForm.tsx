@@ -4,7 +4,6 @@
 // Hook -> Simplificar o processo para ter acesso as informações
 
 import { ReactNode, createContext, useContext, useReducer } from "react";
-import { api } from "../services/api";
 
 interface ITool {
   currentStep: 0;

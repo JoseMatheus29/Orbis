@@ -15,12 +15,11 @@ import { IRecommendation } from "./types";
 const Recommendation = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useForm();
-  const [isLoading, setIsLoading] = useState(false);
   const [renderRecommendation, setRenderRecommendation] = useState(false);
 
   useEffect(() => {
     // @ts-ignore
-    if (state.currentStep !== 1) {
+    if (state.currentStep !== 0) {
       navigate("/stage");
       console.log("entrou");
     }
@@ -34,7 +33,6 @@ const Recommendation = () => {
 
   const reqRecommendation = async () => {
     try {
-      setIsLoading(true);
       const response = await api.post("/recommendation", {
         Stage_idStage: state.Stage_idStage,
         time: state.time,
@@ -46,7 +44,6 @@ const Recommendation = () => {
     } catch (error) {
       console.error(error);
     } finally {
-      setIsLoading(false);
       setRenderRecommendation(true);
       dispatch({ type: FormAction.resetState, payload: null });
     }
@@ -57,11 +54,7 @@ const Recommendation = () => {
       <Header />
       <img src={SectionForm} id="section-recommendation" />
       <Content>
-        <Finish>
-          <img src={OrbisRecommendation} id="orbis-recommendation" />
-          <img src={FinishText} id="finish-text" />
-        </Finish>
-        <Button name="Visualizar Resultados" onClick={reqRecommendation} />
+        
 
         {renderRecommendation ? (
           <RecommendationContainer>
@@ -116,14 +109,22 @@ const Recommendation = () => {
                 variant=""
                 onClick={handleTryAgain}
               />
-              <Button
+              {/* <Button
                 name="Baixar Recomendação"
                 variant=""
                 onClick={undefined}
-              />
+              /> */}
             </Row>
           </RecommendationContainer>
-        ) : null}
+        ) : 
+        <>
+        <Finish>
+          <img src={OrbisRecommendation} id="orbis-recommendation" />
+          <img src={FinishText} id="finish-text" />
+        </Finish>
+        <Button name="Visualizar Resultados" onClick={reqRecommendation} />
+        </>
+        }
       </Content>
     </>
   );

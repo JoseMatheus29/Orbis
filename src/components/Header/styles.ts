@@ -19,7 +19,7 @@ export const Content = styled.div`
     align-items: center; 
 
     .logo a{
-        
+        cursor: pointer;
         h1 {
             font-family: 'Caprasimo', serif;
             font-weight: normal;
@@ -38,6 +38,7 @@ export const List = styled.ul`
     justify-content: center;
     gap: 30px;
     height: 75px;
+    
 
     li{
         font-size: 1rem;
@@ -48,6 +49,7 @@ export const List = styled.ul`
         align-items: center;
         justify-content: center;
         position: relative;
+        cursor: pointer;
     }
 
     .hover-underline-animation::after {

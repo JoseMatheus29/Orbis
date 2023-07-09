@@ -76,4 +76,64 @@ export const GlobalStyle = createGlobalStyle`
         position: absolute;
         z-index: -1;
     }
+
+    .react-modal-overlay {
+        background: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+    }
+
+    .react-modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 8px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    .react-modal-content {
+        width: 100%;
+        max-width: 576px;
+        background-color: var(--background);
+        padding: 3rem;
+        position: relative;
+        border-radius: 0.24rem;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    
+        img {
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 24px;
+            line-height: 160%;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 30px;
+
+            button {
+                width: 150px;
+            }
+        }
+    }
 `
