@@ -7,6 +7,7 @@ import TimeLineOrbis from "../../components/TimeLine";
 import CardTools from "../../components/CardTools"
 import Button from "../../components/Button";
 import Tips from "../../components/CardTips";
+import { imgTool } from "./utils";
 
 interface ITool {
     name_pt: string;
@@ -43,7 +44,7 @@ const Tool = () => {
             .then(response => setSteps(response.data));
     }, [])
 
-    console.log(steps);
+    //console.log(steps);
 
     return (
         <>
@@ -79,6 +80,7 @@ const Tool = () => {
                  <div>
                     <h3 id="WhyUseTitle">QUANDO USAR</h3>
                     <p id="WhyUseText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat quam non leo viverra, vel varius velit faucibus. Aenean congue magna a eros commodo, in pellentesque felis vestibulum. Fusce ullamcorper massa sed risus lobortis, at volutpat dolor lobortis. Praesent quis efficitur ipsum. Sed non sapien sed enim eleifend tincidunt sed at mauris. Nullam eu est lectus. Vestibulum et blandit orci. Nullam vitae nisi id nunc pellentesque fermentum eget a odio.</p>
+                    <img id="ImgTool" src={imgTool(tool.name_pt)}/>
                     <h3 id="WhyUseTitle">Passo a passo</h3>
                     <Steps>
                     { steps.map((step) => <>
