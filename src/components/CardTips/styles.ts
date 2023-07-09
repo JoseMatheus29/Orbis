@@ -4,7 +4,8 @@ import { ICardStyle } from './types'
 
 
 export const Container = styled.div<ICardStyle>`
-    margin: 0 auto;
+    margin-bottom: 60px; 
+    padding: 16px;
     font-family: 'Raleway', sans-serif;
     height: 125px;
     width: 881px;
@@ -18,7 +19,13 @@ export const Container = styled.div<ICardStyle>`
     background-color: var(--yellow_100);
     border: 3px solid var(--purple_200);
     box-shadow: 3px 3px 0px var(--purple_200);
+
+    p {
+        font-weight: 500;
+        line-height: 120%;
+    }
     h4{  
+        margin-bottom: 8px;
         font-family: 'Raleway', sans-serif;
         ${({variant}) => variant === "analyzes" && css`
             color:var(--purple_200);

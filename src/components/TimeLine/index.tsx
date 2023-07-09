@@ -27,7 +27,7 @@ const TimeLineOrbis = ({title, description, number, variant}: IsTool )  => {
         [`& .${timelineItemClasses.root}:before`]: {
           flex: 0,
         },
-        padding: 0,
+        padding: 0
       }}
     >
       
@@ -38,10 +38,14 @@ const TimeLineOrbis = ({title, description, number, variant}: IsTool )  => {
               background:"var(--white)",
               borderColor :cor,
               color: cor,
-              width:30,
+              width:35,
+              height: 35,
               margin:0,
               justifyContent:"center",
-              alignItems: "flex-start",
+              fontSize: '1.25rem',
+              fontWeight: 600,
+              boxShadow: 'none',
+              alignItems: "center",
                }}>
               {number}
             </TimelineDot>

@@ -1,6 +1,6 @@
 import { Container, Content, List } from "./styles"
 import Logo from "../../assets/logo-orbis.svg"
-import { useLocation, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 // import { useEffect, useState } from "react";
 // import InputTools from '../InputTools';
 import { useForm } from "../../hooks/useForm";

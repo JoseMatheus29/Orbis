@@ -47,6 +47,7 @@ export const ItensContent = styled.div<IToolStyle>`
         #WhyUseText{
             margin-left: 30px;
             margin-top: 10px;
+            line-height: 160%;
             font-family: 'Raleway', sans-serif;
             color:var(--text)
         }
@@ -59,7 +60,7 @@ export const ItensContent = styled.div<IToolStyle>`
 
 export const Steps = styled.div`
     margin-top: 16px;
-
+    margin-bottom: 28px;
     h2 {
         margin: 10px 0;
     }

@@ -12,8 +12,8 @@ const Tips = ({ text, template} : ICardTips) => {
         <Container
             variant= {template}
         >
-            <h4>Se liga na dica</h4>
-            {text}
+            <h4>SE LIGA NA DICA</h4>
+           <p> {text}</p>
         </Container>
         </>
         
