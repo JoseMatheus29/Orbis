@@ -15,7 +15,7 @@ export function imgTool(name: string){
     for (const element in listTool) {
         if(listTool[element] == name){
             const nameTool = name.replace(/ /g, "") + '.svg'
-            pathImg = '/src/assets/img_tools/'+nameTool
+            pathImg = 'https://alairtonjunior.com/img_tools/'+nameTool
         }
     }
     return pathImg
