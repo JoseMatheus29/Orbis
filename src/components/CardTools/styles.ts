@@ -3,7 +3,7 @@ import { ICardStyle } from './types'
 
 export const Container = styled.div<ICardStyle>`
     height: 330px;
-    width: 240px;
+    width: 210px;
     padding: 16px;
     position: relative;
     color: var(--text);
@@ -36,15 +36,15 @@ export const Container = styled.div<ICardStyle>`
             background-color: var(--blue_200);`}
         }
     ${({variant}) => variant === "analyzes" && css`
-        border: 3px solid var(--purple_200);
+        border: 2px solid var(--purple_200);
         box-shadow: 3px 3px 0px var(--purple_300);
     `}
     ${({variant}) => variant === "design" && css`
-        border: 3px solid var(--yellow_300);
+        border: 2px solid var(--yellow_300);
         box-shadow: 3px 3px 0px var(--yellow_400);
     `}
     ${({variant}) => variant === "evaluate" && css`
-        border: 3px solid var(--blue_200);
+        border: 2px solid var(--blue_200);
         box-shadow: 3px 3px 0px var(--blue_300);
         `}
     
@@ -52,6 +52,22 @@ export const Container = styled.div<ICardStyle>`
 
 export const Icons = styled.div`
     width: 100%;
+    margin-bottom: 24px;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    h4 {
+        margin-bottom: 8px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
 `
 

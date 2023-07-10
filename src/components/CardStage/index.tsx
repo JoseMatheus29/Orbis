@@ -36,7 +36,7 @@ const CardStage = ({ name, description, template, subtitle } : ICardStage) => {
         >
         <Container template={template}>
             {
-                template == "analyses" ? <img src={ AnalysesOrbis } id="img_orbis"/> : null
+                template == "analyzes" ? <img src={ AnalysesOrbis } id="img_orbis"/> : null
             }
             {
                 template == "design" ? <img src={ DesignOrbis } id="img_orbis"/> : null

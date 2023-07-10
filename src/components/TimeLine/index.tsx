@@ -22,7 +22,7 @@ interface IsTool {
 const TimeLineOrbis = ({title, description, number, variant, alert}: IsTool )  => {
   var cor;
   if(variant == '3'){cor = "var(--purple_200)";}
-  if(variant == '4'){cor = "var(--yellow_200)"; }
+  if(variant == '4'){cor = "var(--yellow_300)"; }
   if(variant == '5'){cor = "var(--blue_200)";}
   return (
     <>

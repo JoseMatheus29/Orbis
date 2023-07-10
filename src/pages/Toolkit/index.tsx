@@ -120,7 +120,7 @@ const Toolkit = () => {
               <Button 
                 name="ANALISAR" 
                 onClick={() => handleButtonFilterStage('3')}
-                variant={selectedStages.includes('3') ? "analyses" : ""}
+                variant={selectedStages.includes('3') ? "analyzes" : ""}
               />
               <Button 
                 name="PROJETAR" 

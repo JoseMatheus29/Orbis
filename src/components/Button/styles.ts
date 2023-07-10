@@ -39,7 +39,7 @@ export const ButtonStyle = styled.button<IButtonStyle>`
 
     
 
-    ${({variant}) => variant === "analyses" && css`
+    ${({variant}) => variant === "analyzes" && css`
        background-color: var(--purple_100);
        color: var(--text);
        box-shadow:  5px 5px 0 0 var(--purple_200), 5px 5px 0 2px var(--text);

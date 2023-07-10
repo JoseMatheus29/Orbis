@@ -91,7 +91,7 @@ const Home = () => {
                     <h1>Etapas do DCU</h1>
                     <CardStage
                         name="Analisar"
-                        template="analyses"
+                        template="analyzes"
                         subtitle="Identificar quem são os principais usuários de um produto e a natureza do problema."
                         description="Nesta etapa o designer deve se aproximar dos usuários e observar suas atividades, na tentativa de entender interesses, motivações e necessidades. A compreensão adequada do problema é proveniente do conhecimento aprofundado sobre aquilo que as pessoas desejam realizar e os impedimentos existentes na experiência atual. "
                     />

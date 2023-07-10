@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/Header";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { api } from "../../services/api";
-import { Content, Steps, ItensContent, HeaderContent } from "./styles";
+import { Content, Steps, ItensContent, HeaderContent, Nav } from "./styles";
 import TimeLineOrbis from "../../components/TimeLine";
 import CardTools from "../../components/CardTools";
 import Tips from "../../components/CardTips";
 import { imgTool } from "./utils";
 import alertModal from "../../assets/icon/alertModal.svg";
+import Button from "../../components/Button";
+import Arrow from '../../assets/form_assests/arrow-back.svg';
+import ExtraMaterials from "../../components/ExtraMaterials";
 
 interface ITool {
   name_pt: string;
@@ -31,6 +34,7 @@ interface ISteps {
 
 const Tool = () => {
   const params = useParams();
+  const [ extraMaterial, setExtraMaterial ] = useState(false);
 
   const [tool, setTool] = useState<ITool>({
     name_pt: "",
@@ -58,27 +62,41 @@ const Tool = () => {
 
   document.title = `${tool.name_pt} - Orbis`;
 
+  const handleExtraMaterials = () => {
+    if(extraMaterial) {
+      setExtraMaterial(false);
+    } else {
+      setExtraMaterial(true);
+    }
+    
+  }
+
   return (
     <>
       <Header />
+      
       <Content variant={tool.templateName}>
+        <Nav>
+          <Link to="../toolkit">Toolkit</Link>
+          <img src={Arrow} style={{ transform: 'rotate(180deg)'}}/>
+          <p>{tool.name_pt}</p>
+        </Nav>
         <HeaderContent>
-          <img
-            src={`https://alairtonjunior.com/imgs_icon/` + tool.icon}
-            alt="Ícone"
-          />
-          <div>
-            <h1>{tool.name_pt}</h1>
-            <h2>{tool.name_en}</h2>
-          </div>
-          {/* <div id="Button">
-            <Button
-              name="Materiais extras"
-              onClick={undefined}
-              variant={"default"}
-              on
+          <div id="tool-header">
+            <img
+              src={`https://alairtonjunior.com/imgs_icon/` + tool.icon}
+              alt="Ícone"
             />
-          </div> */}
+            <div>
+              <h1>{tool.name_pt}</h1>
+              <h2>{tool.name_en}</h2>
+            </div>
+          </div>
+            <Button
+              name={extraMaterial ? "Ver Informações" : "Materiais extras"}
+              onClick={handleExtraMaterials}
+              variant={tool.templateName}
+            />
         </HeaderContent>
         <ItensContent variant={tool.templateName}>
           <div>
@@ -89,7 +107,7 @@ const Tool = () => {
               stage_id={tool.Stage_idStage}
             />
           </div>
-          <div>
+          { !extraMaterial ? (<div>
             <h3 id="WhyUseTitle">QUANDO USAR</h3>
             <p id="WhyUseText">
               {tool.toUse}
@@ -114,7 +132,14 @@ const Tool = () => {
               ))}
             </Steps>
             <Tips text={tool.tip} template={tool.templateName} />
-          </div>
+          </div>) :
+            (
+              <div>
+                <h3 id="WhyUseTitle">MATERIAIS EXTRAS</h3>
+                <ExtraMaterials name={tool.name_pt}/>
+              </div>
+            )
+          }
         </ItensContent>
       </Content>
     </>

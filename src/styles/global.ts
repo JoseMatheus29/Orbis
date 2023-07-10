@@ -61,10 +61,10 @@ export const GlobalStyle = createGlobalStyle`
 
 
    .MuiAutocomplete-inputRoot {
-        height: 40px;
         background-color: var(--white);
         width: 240px;
-        border: 2px solid #FFDAD3;
+        height: 40px;
+       //border: 2px solid #FFDAD3;
         border: none;
         outline: none;
     }

@@ -6,20 +6,16 @@ export const Content = styled.div<IToolStyle>`
     margin: 0 auto;
     padding-top: 100px;
     h1{  
-        margin-left:30px;
         font-family: 'Raleway', sans-serif;
         ${({variant}) => variant === "analyzes" && css`
        color:var(--purple_300);
         `}
         ${({variant}) => variant === "design" && css`
-            color:var(--yellow_200);
+            color:var(--yellow_300);
         `}
         ${({variant}) => variant === "evaluate" && css`
             color:var(--blue_200);
         `}   
-    }
-    h2{
-        margin-left:30px;
     }
    
 `
@@ -27,9 +23,29 @@ export const Content = styled.div<IToolStyle>`
 export const HeaderContent = styled.div `
     display: flex;
     flex-direction: line;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 
-    #Button{
-        margin-left:50%;
+    #tool-header {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+
+    img {
+    }
+
+    div {
+        width: 100%;
+        h1 {
+            font-weight: 600;
+            width: 300px;
+        }
+    }
+
+    button {
+        width: 200px;
     }
 `
 
@@ -40,12 +56,12 @@ export const ItensContent = styled.div<IToolStyle>`
     div{
         
         #WhyUseTitle{
-            font-weight: bold;
             margin-top: 10px;
             margin-left: 30px;
+            font-weight: 700;
             font-family: 'Raleway', sans-serif;
             ${({variant}) => variant === "analyzes" && css` color:var(--purple_300);`}
-            ${({variant}) => variant === "design" && css`color:var(--yellow_200);`}
+            ${({variant}) => variant === "design" && css`color:var(--yellow_300);`}
             ${({variant}) => variant === "evaluate" && css`color:var(--blue_200);`} 
            
         }  
@@ -57,27 +73,35 @@ export const ItensContent = styled.div<IToolStyle>`
             color:var(--text)
         }
         #ImgTool{
+            margin: 0 auto;
             display: flex;
-            margin-top: 30px;
-            margin-left:25%;   
-            height:257px;
+            margin-top: 30px; 
+            margin-bottom: 24px;
+            width: 75%;
+            max-height: 350px;
         }
         #alert{
             display: flex;
             flex-direction: row;
+            align-items: center;
             line-height: 160%;
             margin-left: 30px;
+            padding: 8px 12px;
             margin-top: 20px;
-            width: 881px;
-            height: 50px;
-            border-radius: 10px;
-            color: var(--red_200);
+            
+            border-radius: 8px;
+            
             background-color: var(--red_100);
             font-family: 'Raleway', sans-serif;   
+
+            p {
+                color: var(--red_200);
+            }
         }
         #imgAlert{
             width:40px;
             height:40px;
+            margin-right: 12px;
         }
         #NoImgAlert{
             display: none;
@@ -91,6 +115,19 @@ export const Steps = styled.div`
     margin-bottom: 28px;
     h2 {
         margin: 10px 0;
+    }
+`
+
+export const Nav = styled.div`
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+    margin-bottom: 32px;
+
+    a {
+        color: var(--text);
+        font-weight: 600;
+        
     }
 `
 

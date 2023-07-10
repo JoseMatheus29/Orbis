@@ -20,7 +20,7 @@ export const Container = styled.div<IContainerStyle>`
         margin-bottom: 8px;
     }
     
-    ${({template}) => template === "analyses" && css`
+    ${({template}) => template === "analyzes" && css`
         background-color: var(--purple_100);
         border: 4px solid var(--purple_200);
         box-shadow: 4px 4px 0px 0px var(--purple_200);
