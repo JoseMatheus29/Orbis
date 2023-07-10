@@ -1,7 +1,4 @@
-<h1 align = "center">
-
-   <img src="src/assets/name_orbis.svg" alt="Orbis é uma bussóla com bigode e muito simpática" witdh="200">
-</h1>
+<img src="src/assets/name_orbis.svg" alt="Orbis é uma bussóla com bigode e muito simpática" witdh="200">
 
 
 <img src="src/assets/orbis_home.svg" alt="Orbis é uma bussóla com bigode e muito simpática">
