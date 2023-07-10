@@ -12,10 +12,12 @@ interface IsTool {
   description:  string;
   number:  number;
   variant: string;
+  alert?: string;
+
 }
 
 
-const TimeLineOrbis = ({title, description, number, variant}: IsTool )  => {
+const TimeLineOrbis = ({title, description, number, variant, alert}: IsTool )  => {
   var cor;
   if(variant == '3'){cor = "var(--purple_200)";}
   if(variant == '4'){cor = "var(--yellow_200)"; }
@@ -62,6 +64,8 @@ const TimeLineOrbis = ({title, description, number, variant}: IsTool )  => {
             }}>
           <Typography font-family= "Raleway, sans-serif"  variant="h6" component="span">{title}</Typography>
           <Typography font-family= "Raleway, sans-serif">{description} </Typography>
+          <Typography font-family= "Raleway, sans-serif">{alert} </Typography>
+
         </TimelineContent>
       </TimelineItem>
     </Timeline>

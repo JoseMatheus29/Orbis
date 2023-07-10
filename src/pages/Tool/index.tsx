@@ -7,6 +7,7 @@ import TimeLineOrbis from "../../components/TimeLine";
 import CardTools from "../../components/CardTools";
 import Tips from "../../components/CardTips";
 import { imgTool } from "./utils";
+import alertModal from "../../assets/icon/alertModal.svg";
 
 interface ITool {
   name_pt: string;
@@ -55,7 +56,6 @@ const Tool = () => {
       .then((response) => setSteps(response.data));
   }, []);
 
-  //console.log(steps);
   document.title = `${tool.name_pt} - Orbis`;
 
   return (
@@ -94,7 +94,11 @@ const Tool = () => {
             <p id="WhyUseText">
               {tool.toUse}
             </p>
-            <img id="ImgTool" src={imgTool(tool.name_pt)} />
+            <div id={tool.alert ? "alert" : ''}>
+                <img id={tool.alert ? "imgAlert" : 'NoImgAlert'} src={alertModal}/>
+                <p >{tool.alert}</p>
+            </div>
+            <img id={imgTool(tool.name_pt) ? "ImgTool" : ""} src={imgTool(tool.name_pt)} />
             <h3 id="WhyUseTitle">PASSO-A-PASSO</h3>
             <Steps>
               {steps.map((step) => (
@@ -104,6 +108,7 @@ const Tool = () => {
                     description={step.description}
                     number={steps.indexOf(step) + 1}
                     variant={tool.Stage_idStage}
+                    alert = {step.alert}
                   />
                 </>
               ))}
