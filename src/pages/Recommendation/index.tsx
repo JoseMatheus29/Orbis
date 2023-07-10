@@ -40,8 +40,9 @@ const Recommendation = () => {
         participants: state.participants,
         effort: state.effort,
       });
-
+  
       setResult(response.data);
+      localStorage.setItem('recommendation', JSON.stringify(response.data));
     } catch (error) {
       console.error(error);
     } finally {
@@ -49,11 +50,16 @@ const Recommendation = () => {
       dispatch({ type: FormAction.resetState, payload: null });
     }
   };
+  
+
+  const handleDocumentRecommendation = () => {
+    window.open('/document', '_blank');
+  }
 
   return (
     <>
       <Header />
-      <img src={SectionForm} id="section-recommendation" />
+        <img src={SectionForm} id="section-recommendation" />
       <Content>
         
 
@@ -110,11 +116,11 @@ const Recommendation = () => {
                 variant=""
                 onClick={handleTryAgain}
               />
-              {/* <Button
+              <Button
                 name="Baixar Recomendação"
                 variant=""
-                onClick={undefined}
-              /> */}
+                onClick={handleDocumentRecommendation}
+              />
             </Row>
           </RecommendationContainer>
         ) : 

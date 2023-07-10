@@ -12,6 +12,7 @@ interface ITool {
   Stage_idStage: "" | "3" | "4" | "5";
   participants?: string;
   typeOfData?: string;
+  recommendation?: any;
 }
 
 type Action = {
@@ -34,7 +35,8 @@ const initialData: ITool = {
   time: "",
   effort: "",
   participants: "",
-  typeOfData: ""
+  typeOfData: "",
+  recommendation: {}
 
 };
 
@@ -50,7 +52,8 @@ export enum FormAction {
   setEffort,
   setParticipants,
   setTypeOfData,
-  resetState
+  resetState,
+  setRecommendation
 }
 
 const formReducer = (state: ITool, action: Action) => {
@@ -67,6 +70,8 @@ const formReducer = (state: ITool, action: Action) => {
       return { ...state, participants: action.payload };
     case FormAction.setTypeOfData:
       return { ...state, typeOfData: action.payload };
+    case FormAction.setRecommendation:
+      return { ...state, recommendation: action.payload };
     case FormAction.resetState:
       return initialData;
     default:

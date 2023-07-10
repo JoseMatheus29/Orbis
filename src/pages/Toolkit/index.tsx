@@ -12,8 +12,6 @@ import { ITool } from "./types";
 import SliderFilter from "../../components/SliderFilter";
 import Skeleton from "@mui/material/Skeleton";
 
-import { motion } from 'framer-motion'
-
 const Toolkit = () => {
   document.title = 'Toolkit - Orbis';
   const [allTools, setAllTools] = useState<ITool[]>([]);
@@ -109,12 +107,7 @@ const Toolkit = () => {
 
   
   return (
-    <motion.div
-      initial={{ opacity: 0.8 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <>
       <Header />
       <Content>
         <h1>Toolkit</h1>
@@ -187,7 +180,7 @@ const Toolkit = () => {
         </GridCards>
        
       </Content>
-      </motion.div>
+      </>
   );
 };
 

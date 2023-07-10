@@ -11,6 +11,7 @@ import FormEffort from "./pages/FormEffort";
 import FormParticipants from "./pages/FormParticipants";
 import FormTypeOfData from "./pages/FormTypeOfData";
 import Recommendation from "./pages/Recommendation";
+import DocumentRecommendation from "./pages/DocumentRecommendation";
 
 const RouteElement = () => {
   return (
@@ -28,6 +29,7 @@ const RouteElement = () => {
         <Route element={<FormTypeOfData/>} path="/type_of_data"/>
 
         <Route element={<Recommendation/>} path="/recommendation"/>
+        <Route element={<DocumentRecommendation/>} path="/document"/>
       </Routes>
     </BrowserRouter>
   );

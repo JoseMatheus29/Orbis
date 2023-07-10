@@ -7,13 +7,14 @@ import SectionForm from "../../assets/section-form.svg"
 
 import { useNavigate } from "react-router-dom";
 
-
 const Form = () => {
 
     const navigate = useNavigate ();
     const handleNavigateFormStage = () => {
         navigate('/stage');
     }
+
+
     document.title = 'Formulário';
     return (
         <>

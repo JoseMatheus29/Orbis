@@ -1,8 +1,8 @@
 import { Container, Content, List } from "./styles"
 import Logo from "../../assets/logo-orbis.svg"
-import {useNavigate } from "react-router-dom";
-// import { useEffect, useState } from "react";
-// import InputTools from '../InputTools';
+import {useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import InputTools from '../InputTools';
 import { useForm } from "../../hooks/useForm";
 
 interface IHeader {
@@ -11,17 +11,17 @@ interface IHeader {
 
 const Header = ({ isOpenModal }: IHeader ) => {
 
-    // const location = useLocation();
+    const location = useLocation();
     const { state } = useForm();
     const navigate = useNavigate();
 
-    // const [ isHome, setIsHome ] = useState(false);
+    const [ isHome, setIsHome ] = useState(false);
 
-    // useEffect(() => {
-    //     if(location.pathname === '/') {
-    //         setIsHome(true);
-    //     }
-    // }, [ location.pathname ])
+    useEffect(() => {
+        if(location.pathname === '/') {
+            setIsHome(true);
+        }
+    }, [ location.pathname ])
 
     const handleNavToolkit = () => {
         // @ts-ignore
@@ -68,10 +68,10 @@ const Header = ({ isOpenModal }: IHeader ) => {
                 <nav>
                   
                     <List>
-                        {/* {isHome ? 
+                        {isHome ? 
                             <InputTools/>
                             :
-                            null} */}
+                            null}
                         <a onClick={handleNavToolkit}>
                             <li className="hover-underline-animation">
                                 Acessar o Toolkit

@@ -12,5 +12,8 @@ export const Container = styled.div`
         width: 240px;
         border-radius: 4px;
         font-family: 'Raleway', sans-serif;
+
+        display: flex;
+        align-items: center;
     }
 `
