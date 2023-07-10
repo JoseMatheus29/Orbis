@@ -5,6 +5,8 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import Typography from '@mui/material/Typography';
+import { Alert } from "./styles";
+import alertModal from "../../assets/icon/alertModal.svg";
 
 
 interface IsTool {
@@ -12,7 +14,7 @@ interface IsTool {
   description:  string;
   number:  number;
   variant: string;
-  alert?: string;
+  alert?: string | undefined;
 
 }
 
@@ -64,7 +66,11 @@ const TimeLineOrbis = ({title, description, number, variant, alert}: IsTool )  =
             }}>
           <Typography font-family= "Raleway, sans-serif"  variant="h6" component="span">{title}</Typography>
           <Typography font-family= "Raleway, sans-serif">{description} </Typography>
-          <Typography font-family= "Raleway, sans-serif">{alert} </Typography>
+          <Typography >{alert != null ? <Alert>
+            <img id={alert != null ? "imgAlert" : 'NoImgAlert'} src={alertModal}/>
+            {alert}
+            </Alert> : null} 
+          </Typography>
 
         </TimelineContent>
       </TimelineItem>

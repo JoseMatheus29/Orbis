@@ -96,7 +96,7 @@ const Tool = () => {
             </p>
             <div id={tool.alert ? "alert" : ''}>
                 <img id={tool.alert ? "imgAlert" : 'NoImgAlert'} src={alertModal}/>
-                <p >{tool.alert}</p>
+                <p>{tool.alert}</p>
             </div>
             <img id={imgTool(tool.name_pt) ? "ImgTool" : ""} src={imgTool(tool.name_pt)} />
             <h3 id="WhyUseTitle">PASSO-A-PASSO</h3>

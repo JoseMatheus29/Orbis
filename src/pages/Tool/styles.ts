@@ -6,6 +6,7 @@ export const Content = styled.div<IToolStyle>`
     margin: 0 auto;
     padding-top: 100px;
     h1{  
+        margin-left:30px;
         font-family: 'Raleway', sans-serif;
         ${({variant}) => variant === "analyzes" && css`
        color:var(--purple_300);
@@ -16,6 +17,9 @@ export const Content = styled.div<IToolStyle>`
         ${({variant}) => variant === "evaluate" && css`
             color:var(--blue_200);
         `}   
+    }
+    h2{
+        margin-left:30px;
     }
    
 `
