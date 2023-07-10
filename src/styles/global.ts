@@ -135,5 +135,7 @@ export const GlobalStyle = createGlobalStyle`
                 width: 150px;
             }
         }
+
+
     }
 `

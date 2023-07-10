@@ -23,12 +23,13 @@ const InputTools = () => {
         <>
         <Container>
             <Autocomplete
-                disablePortal
+                freeSolo
+                disableClearable
                 id="combo-box-demo"
                 options={optionsTools}
                 
                 sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params}  />}
+                renderInput={(params) => <TextField {...params} label="Pesquisa um método...." />}
             />
         </Container>
         </>
