@@ -34,6 +34,7 @@ export const ItensContent = styled.div<IToolStyle>`
     display: flex;
     flex-direction: row;
     div{
+        
         #WhyUseTitle{
             font-weight: bold;
             margin-top: 10px;
@@ -52,9 +53,32 @@ export const ItensContent = styled.div<IToolStyle>`
             color:var(--text)
         }
         #ImgTool{
-         margin-left:25%;   
+            display: flex;
+            margin-top: 30px;
+            margin-left:25%;   
+            height:257px;
         }
-        
+        #alert{
+            display: flex;
+            flex-direction: row;
+            line-height: 160%;
+            margin-left: 30px;
+            margin-top: 20px;
+            width: 881px;
+            height: 50px;
+            border-radius: 10px;
+            color: var(--red_200);
+            background-color: var(--red_100);
+            font-family: 'Raleway', sans-serif;   
+        }
+        #imgAlert{
+            width:40px;
+            height:40px;
+        }
+        #NoImgAlert{
+            display: none;
+        }
+
     }
 `
 
