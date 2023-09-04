@@ -76,7 +76,7 @@ export const Section = styled.section`
 
   @media (max-width: 1024px) {
 
-    #section-about, #section-home {
+    #section-about, #section-home, #graphics {
       visibility: hidden;
     }
   }
@@ -95,6 +95,17 @@ export const Center = styled.div`
   #DCU {
     width: 30%;
   }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding-top: 0;
+    column-gap: 0%;
+
+    #DCU {
+      width: 100%;
+    }
+  }
+
 `;
 
 export const Content = styled.div`
@@ -106,7 +117,7 @@ export const Content = styled.div`
   position: relative;
 
   @media (max-width: 1024px) {
-    width: 90%;
+    width: 85%;
   }
 `;
 
@@ -205,7 +216,7 @@ export const Idealizer = styled.div`
   }
 
   @media (max-width: 1024px) {
-    width: 80%;
+    width: 100%;
     text-align: center;
   }
 `;

@@ -9,9 +9,6 @@ export const Container = styled.div`
     z-index: 2;
     width: 100%;
 
-    @media (max-width: 1024px) {
-        
-    }
 `
 
 export const Content = styled.div`
@@ -36,8 +33,7 @@ export const Content = styled.div`
     }
 
     @media (max-width: 1024px) {
-        width: 95%;
-        flex-direction: column;
+        width: 85%;
     }
 `
 
