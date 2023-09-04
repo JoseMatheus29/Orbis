@@ -52,9 +52,21 @@ export const Container = styled.div<IContainerStyle>`
         text-align: left;
         }
     `}
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        padding: 30px 16px;
+
+        h1 {
+            text-align: center;
+        }
+    }
 `
 
 export const Column = styled.div`
     display: flex;
     flex-direction: column;
+
+
+
 `

@@ -8,6 +8,10 @@ export const Container = styled.div`
     position: fixed;
     z-index: 2;
     width: 100%;
+
+    @media (max-width: 1024px) {
+        
+    }
 `
 
 export const Content = styled.div`
@@ -29,6 +33,11 @@ export const Content = styled.div`
         display: flex;
         gap: 12px;
         color: var(--white);
+    }
+
+    @media (max-width: 1024px) {
+        width: 95%;
+        flex-direction: column;
     }
 `
 
